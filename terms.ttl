@@ -17,7 +17,7 @@
     rdfs:comment """A vocabulary for describing persons, their interests, 
     affiliations and possible connections. Mostly for academic contexts, celestial 
     interests, musical taste, fictional TV characters and the architecture for linking to peers 
-    who maintain their own personal profiles."""@en ;
+    who maintain their own personal profiles. Some parts have a swahili equivalent."""@en ;
     dcterms:creator <https://mudoki.github.io/data#MarlinKisia> ;
     dcterms:created "2026-03-03"^^xsd:date ;
     vann:preferredNamespacePrefix "mkv" ;
@@ -29,16 +29,19 @@
 
 mkv:Person a rdfs:Class ;
     rdfs:label "Person"@en ;
+    rdfs:label "Mtu"@sw ;
     rdfs:comment "A human being. The root class for all person types in this vocabulary."@en .
 
 mkv:Student a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
     rdfs:label "Student"@en ;
+    rdfs:label "Mwanafunzi"@sw ;
     rdfs:comment "A person enrolled in an academic programme at a university or institution."@en .
 
 mkv:Instructor a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
     rdfs:label "Instructor"@en ;
+    rdfs:label "Mwalimu"@sw ;
     rdfs:comment "A person who teaches or supervises students in a laboratory or course context."@en .
 
 mkv:KnowledgeGraphsResearcher a rdfs:Class ;
@@ -58,6 +61,7 @@ mkv:EarlyYearsEducator a rdfs:Class ;
 mkv:Peer a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
     rdfs:label "Peer"@en ;
+    rdfs:label "Rika"@sw ;
     rdfs:comment """A person known to the subject, typically a fellow student or colleague, 
     who may maintain their own linked data profile at an external URI. 
     The mkv:externalProfile property is used to link to that profile when available."""@en .
@@ -68,6 +72,7 @@ mkv:Peer a rdfs:Class ;
 
 mkv:Organization a rdfs:Class ;
     rdfs:label "Organization"@en ;
+    rdfs:label "Shirika"@sw ;
     rdfs:comment "A structured body of people with a shared purpose."@en .
 
 mkv:University a rdfs:Class ;
@@ -79,11 +84,13 @@ mkv:University a rdfs:Class ;
 mkv:ResearchInstitution a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
     rdfs:label "Research Institution"@en ;
+    rdfs:label "Taasisi ya Utafiti"@sw ;
     rdfs:comment "An organisation whose primary activity is research."@en .
 
 mkv:Kindergarten a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
     rdfs:label "Kindergarten"@en ;
+    rdfs:label "Shule ya Chekechea"@sw ;
     rdfs:comment "An early childhood education setting for young children, typically ages 3–6."@en .
 
 # ------------------------------------------------------------
@@ -92,6 +99,7 @@ mkv:Kindergarten a rdfs:Class ;
 
 mkv:Interest a rdfs:Class ;
     rdfs:label "Interest"@en ;
+    rdfs:label "Maslahi"@sw ;
     rdfs:comment "A topic, domain, or activity that a person is interested in or enthusiastic about."@en .
 
 mkv:CelestialInterest a rdfs:Class ;
@@ -181,12 +189,14 @@ mkv:identifier a rdf:Property ;
 
 mkv:memberOf a rdf:Property ;
     rdfs:label "member of"@en ;
+    rdfs:label "mwanachama wa"@en ;
     rdfs:comment "Relates a person to an organisation of which they are a formal member."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
 
 mkv:worksFor a rdf:Property ;
     rdfs:label "works for"@en ;
+    rdfs:labeel "anafanya kazi"@sw ;
     rdfs:comment "Relates a person to an organisation for which they work, paid or voluntary."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
@@ -235,6 +245,7 @@ mkv:knows a rdf:Property ;
 mkv:hasPeer a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
     rdfs:label "has peer"@en ;
+    rdfs:label "ana rika"@sw ;
     rdfs:comment """Relates a person to a peer - a fellow student or colleague 
     who may maintain a linked data profile at an external URI."""@en ;
     rdfs:domain mkv:Person ;
@@ -354,6 +365,7 @@ mkv:Farm a rdfs:Class ;
 mkv:GovernmentOffice a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
     rdfs:label "Government Office"@en ;
+    rdfs:label "Ofisi ya Serikali"@sw ;
     rdfs:comment """A department, agency, or office of a government body at any level - 
     municipal, national, or executive. Includes departments whose director 
     philosophically opposes the existence of government departments."""@en .
@@ -361,6 +373,7 @@ mkv:GovernmentOffice a rdfs:Class ;
 mkv:PoliceStation a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
     rdfs:label "Police Station"@en ;
+    rdfs:label "Kituo cha Polisi"@en ;
     rdfs:comment "A law enforcement facility. A precinct. The 99th, for instance."@en .
 
 mkv:CommunityServiceProgramme a rdfs:Class ;
