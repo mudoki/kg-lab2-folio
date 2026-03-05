@@ -73,28 +73,28 @@ mkd:SeppeSantens a mkv:Peer, mkv:Student ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile "https://seppesantens.github.io/rdf-lab2/data.ttl#me"^^xsd:anyURI ;
     rdfs:seeAlso <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> ;
-    owl:sameAs seppe:<https://seppesantens.github.io/rdf-lab2/data.ttl#me> .
+    owl:sameAs seppe:me .
 
 mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
     mkv:name "Ward De Muynck" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile "https://tabulas.eu/ward/profile.ttl#"^^xsd:anyURI ;
     rdfs:seeAlso <https://www.tabulas.eu/ward/vocab.ttl> ;
-    owl:sameAs ward:<https://tabulas.eu/ward/#me> .
+    owl:sameAs ward:me .
     
 mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
     mkv:name "Thijs Dhulster" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile "https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me"^^xsd:anyURI ;
     rdfs:seeAlso <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> ;
-    owl:sameAs thijs:<https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me> .
+    owl:sameAs thijs:me .
     
 mkd:OliverDeMeyst a mkv:Peer, mkv:Student ;
     mkv:name "Oliver De Meyst" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile "https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#"^^xsd:anyURI ;
     rdfs:seeAlso <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#> ;
-    owl:sameAs oliver:<https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#> .
+    owl:sameAs oliver:me .
 
 # ------------------------------------------------------------
 # INTERESTS
