@@ -1,0 +1,459 @@
+@prefix mkv: <https://mudoki.github.io/kg-lab2-folio/terms#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+
+# ------------------------------------------------------------
+# ONTOLOGY METADATA
+# ------------------------------------------------------------
+
+<https://mudoki.github.io/kg-lab2-folio/terms>
+    a owl:Ontology ;
+    rdfs:label "Marlin Kisia Personal Vocabulary"@en ;
+    rdfs:comment """A vocabulary for describing persons, their interests, 
+    affiliations and possible connections. Mostly for academic contexts, celestial 
+    interests, musical taste, fictional TV characters and the architecture for linking to peers 
+    who maintain their own personal profiles."""@en ;
+    dcterms:creator <https://mudoki.github.io/data#MarlinKisia> ;
+    dcterms:created "2026-03-03"^^xsd:date ;
+    vann:preferredNamespacePrefix "mkv" ;
+    vann:preferredNamespaceUri "https://mudoki.github.io/kg-lab2-folio/terms#"^^xsd:anyURI .
+
+# ------------------------------------------------------------
+# CLASSES - PERSONS
+# ------------------------------------------------------------
+
+mkv:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A human being. The root class for all person types in this vocabulary."@en .
+
+mkv:Student a rdfs:Class ;
+    rdfs:subClassOf mkv:Person ;
+    rdfs:label "Student"@en ;
+    rdfs:comment "A person enrolled in an academic programme at a university or institution."@en .
+
+mkv:Instructor a rdfs:Class ;
+    rdfs:subClassOf mkv:Person ;
+    rdfs:label "Instructor"@en ;
+    rdfs:comment "A person who teaches or supervises students in a laboratory or course context."@en .
+
+mkv:KnowledgeGraphsResearcher a rdfs:Class ;
+    rdfs:subClassOf mkv:Person ;
+    rdfs:label "Knowledge Graphs Researcher"@en ;
+    rdfs:comment """A person who works with modelling vocabularies and/or ontolgies in the context of
+    knowledge graphs. May overlap with Student or Instructor. 
+    The existence of this class in a vocabulary about a person who is 
+    creating a vocabulary is intentionally meta."""@en .
+
+mkv:EarlyYearsEducator a rdfs:Class ;
+    rdfs:subClassOf mkv:Person ;
+    rdfs:label "Early Years Educator"@en ;
+    rdfs:comment "A person who works in an early childhood education setting such as a kindergarten. A
+    more personal tone, as I terribly miss my nephew"@en .
+
+mkv:Peer a rdfs:Class ;
+    rdfs:subClassOf mkv:Person ;
+    rdfs:label "Peer"@en ;
+    rdfs:comment """A person known to the subject, typically a fellow student or colleague, 
+    who may maintain their own linked data profile at an external URI. 
+    The mkv:externalProfile property is used to link to that profile when available."""@en .
+
+# ------------------------------------------------------------
+# CLASSES - ORGANISATIONS
+# ------------------------------------------------------------
+
+mkv:Organization a rdfs:Class ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "A structured body of people with a shared purpose."@en .
+
+mkv:University a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "University"@en ;
+    rdfs:label "Chuo Kikuu"@sw ;
+    rdfs:comment "A higher education institution offering degrees and conducting research."@en .
+
+mkv:ResearchInstitution a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "Research Institution"@en ;
+    rdfs:comment "An organisation whose primary activity is research."@en .
+
+mkv:Kindergarten a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "Kindergarten"@en ;
+    rdfs:comment "An early childhood education setting for young children, typically ages 3–6."@en .
+
+# ------------------------------------------------------------
+# CLASSES - INTERESTS
+# ------------------------------------------------------------
+
+mkv:Interest a rdfs:Class ;
+    rdfs:label "Interest"@en ;
+    rdfs:comment "A topic, domain, or activity that a person is interested in or enthusiastic about."@en .
+
+mkv:CelestialInterest a rdfs:Class ;
+    rdfs:subClassOf mkv:Interest ;
+    rdfs:label "Celestial Interest"@en ;
+    rdfs:comment """An interest in astronomical subjects - stars, planets, moons, 
+    exoplanets, and other bodies in the universe. Strictly scientific; 
+    not astrology."""@en .
+
+mkv:MusicInterest a rdfs:Class ;
+    rdfs:subClassOf mkv:Interest ;
+    rdfs:label "Music Interest"@en ;
+    rdfs:comment "An interest in music, whether listening, performing or singing karaoke."@en .
+
+mkv:KnowledgeInterest a rdfs:Class ;
+    rdfs:subClassOf mkv:Interest ;
+    rdfs:label "Knowledge Interest"@en ;
+    rdfs:comment """An interest in data, knowledge representation, semantic web 
+    technologies, linked data or vocabularies. The presence of this class 
+    in a vocabulary being actively built is self-referential by design."""@en .
+    
+    
+
+# ------------------------------------------------------------
+# CLASSES - CELESTIAL BODIES
+# ------------------------------------------------------------
+
+mkv:CelestialBody a rdfs:Class ;
+    rdfs:label "Celestial Body"@en ;
+    rdfs:comment "A naturally occurring physical entity in space - a star, planet, moon or other object."@en .
+
+mkv:Star a rdfs:Class ;
+    rdfs:subClassOf mkv:CelestialBody ;
+    rdfs:label "Star"@en ;
+    rdfs:label "Nyota"@sw ;
+    rdfs:comment "A luminous sphere of plasma held together by gravity. The Sun is the nearest example."@en .
+
+mkv:Planet a rdfs:Class ;
+    rdfs:subClassOf mkv:CelestialBody ;
+    rdfs:label "Planet"@en ;
+    rdfs:label "Sayari"@en ;
+    rdfs:comment """A celestial body orbiting a star that has sufficient mass to be 
+    roughly spherical and has cleared its orbital neighbourhood. 
+    Includes exoplanets orbiting stars other than the Sun."""@en .
+
+mkv:Moon a rdfs:Class ;
+    rdfs:subClassOf mkv:CelestialBody ;
+    rdfs:label "Moon"@en ;
+    rdfs:label "Mwezi"@sw
+    rdfs:comment """A natural satellite orbiting a planet or other body. 
+    Some moons e.g Europa, Titan, Ganymede, Enceladus - are of profound 
+    scientific interest due to subsurface oceans, atmospheres and 
+    geological activity."""@en .
+
+# ------------------------------------------------------------
+# CLASSES - CREATIVE WORKS
+# ------------------------------------------------------------
+
+mkv:Song a rdfs:Class ;
+    rdfs:label "Song"@en ;
+    dfs:label "Wimbo"@sw ;
+    rdfs:comment "A musical composition intended to be sung, with or without instrumentation."@en .
+
+# ------------------------------------------------------------
+# PROPERTIES - PERSON IDENTITY AND AFFILIATION
+# ------------------------------------------------------------
+
+mkv:name a rdf:Property ;
+    rdfs:label "name"@en ;
+    rdfs:label "jina"@sw ;
+    rdfs:comment "The full name of a person."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:email a rdf:Property ;
+    rdfs:label "email"@en ;
+    rdfs:label "baruapepe"@sw ;
+    rdfs:comment "The email address of a person."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:identifier a rdf:Property ;
+    rdfs:label "identifier"@en ;
+    rdfs:comment "A unique identifier assigned to a person within an institutional context, such as a student number."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:memberOf a rdf:Property ;
+    rdfs:label "member of"@en ;
+    rdfs:comment "Relates a person to an organisation of which they are a formal member."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Organization .
+
+mkv:worksFor a rdf:Property ;
+    rdfs:label "works for"@en ;
+    rdfs:comment "Relates a person to an organisation for which they work, paid or voluntary."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Organization .
+
+mkv:hasAffiliation a rdf:Property ;
+    rdfs:label "has affiliation"@en ;
+    rdfs:comment """Relates a person to an organisation with which they are affiliated - 
+    academic, professional or otherwise. Broader than worksFor; 
+    a student is affiliated with their university without necessarily working for it."""@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Organization .
+
+# ------------------------------------------------------------
+# PROPERTIES - ACADEMIC RELATIONSHIPS
+# ------------------------------------------------------------
+
+mkv:yearOfStudy a rdf:Property ;
+    rdfs:label "year of study"@en ;
+    rdfs:comment "The current year of enrolment of a student in their academic programme, as a positive integer."@en ;
+    rdfs:domain mkv:Student ;
+    rdfs:range xsd:integer .
+
+mkv:hasLabInstructor a rdf:Property ;
+    rdfs:label "has lab instructor"@en ;
+    rdfs:comment "Relates a student to the instructor who supervises them in a laboratory or practical course context."@en ;
+    rdfs:domain mkv:Student ;
+    rdfs:range mkv:Instructor .
+
+mkv:supervisesStudent a rdf:Property ;
+    rdfs:label "supervises student"@en ;
+    rdfs:comment "Relates an instructor to a student they supervise. Inverse of mkv:hasLabInstructor."@en ;
+    rdfs:domain mkv:Instructor ;
+    rdfs:range mkv:Student ;
+    owl:inverseOf mkv:hasLabInstructor .
+
+# ------------------------------------------------------------
+# PROPERTIES - SOCIAL CONNECTIONS AND PEER ARCHITECTURE
+# ------------------------------------------------------------
+
+mkv:knows a rdf:Property ;
+    rdfs:label "knows"@en ;
+    rdfs:comment "Relates a person to another person they know. Symmetric in the real world but not asserted as such here."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Person .
+
+mkv:hasPeer a rdf:Property ;
+    rdfs:subPropertyOf mkv:knows ;
+    rdfs:label "has peer"@en ;
+    rdfs:comment """Relates a person to a peer - a fellow student or colleague 
+    who may maintain a linked data profile at an external URI."""@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Peer .
+
+mkv:externalProfile a rdf:Property ;
+    rdfs:label "external profile"@en ;
+    rdfs:comment """A URI pointing to a peer's own published linked data profile, 
+    such as a GitHub Pages URL hosting their personal RDF data."""@en ;
+    rdfs:domain mkv:Peer ;
+    rdfs:range xsd:anyURI .
+
+# ------------------------------------------------------------
+# PROPERTIES - INTERESTS AND CELESTIAL
+# ------------------------------------------------------------
+
+mkv:hasInterest a rdf:Property ;
+    rdfs:label "has interest"@en ;
+    rdfs:comment "Relates a person to a topic, domain, or activity they are interested in."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Interest .
+
+mkv:interestLabel a rdf:Property ;
+    rdfs:label "interest label"@en ;
+    rdfs:comment "A short human-readable label for an interest instance."@en ;
+    rdfs:domain mkv:Interest ;
+    rdfs:range xsd:string .
+
+mkv:observes a rdf:Property ;
+    rdfs:label "observes"@en ;
+    rdfs:comment "Relates a person to a celestial body they observe, study, or have particular fascination with."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:CelestialBody .
+
+mkv:orbits a rdf:Property ;
+    rdfs:label "orbits"@en ;
+    rdfs:comment "Relates a celestial body to the larger body it orbits. Europa orbits Jupiter; Proxima Centauri b orbits Proxima Centauri."@en ;
+    rdfs:domain mkv:CelestialBody ;
+    rdfs:range mkv:CelestialBody .
+
+mkv:distanceFromSunAU a rdf:Property ;
+    rdfs:label "distance from Sun in AU"@en ;
+    rdfs:comment "The approximate mean distance of a celestial body from the Sun, expressed in astronomical units (AU)."@en ;
+    rdfs:domain mkv:CelestialBody ;
+    rdfs:range xsd:decimal .
+
+# ------------------------------------------------------------
+# PROPERTIES - SONGS
+# ------------------------------------------------------------
+
+mkv:hasFavouriteSong a rdf:Property ;
+    rdfs:label "has favourite song"@en ;
+    rdfs:comment "RRelates a person to a song they particularly like. Especially relevant for karaoke enthusiasts. 
+    Disco-era classics are well represented in this dataset."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Song .
+
+mkv:songTitle a rdf:Property ;
+    rdfs:label "song title"@en ;
+    rdfs:comment "The title of a song."@en ;
+    rdfs:domain mkv:Song ;
+    rdfs:range xsd:string .
+
+mkv:composedBy a rdf:Property ;
+    rdfs:label "composed by"@en ;
+    rdfs:comment "The composer or production team responsible for writing and producing a song."@en ;
+    rdfs:domain mkv:Song ;
+    rdfs:range xsd:string .
+
+mkv:performedBy a rdf:Property ;
+    rdfs:label "performed by"@en ;
+    rdfs:comment "The artist or group who recorded or performs a song."@en ;
+    rdfs:domain mkv:Song ;
+    rdfs:range xsd:string .
+
+mkv:releasedIn a rdf:Property ;
+    rdfs:label "released in"@en ;
+    rdfs:comment "The year in which a song was commercially released."@en ;
+    rdfs:domain mkv:Song ;
+    rdfs:range xsd:gYear .
+
+# ------------------------------------------------------------
+# PROPERTIES - ORGANISATIONS
+# ------------------------------------------------------------
+
+mkv:organizationName a rdf:Property ;
+    rdfs:label "organization name"@en ;
+    rdfs:comment "The official name of an organisation."@en ;
+    rdfs:domain mkv:Organization ;
+    rdfs:range xsd:string .
+
+mkv:organizationUrl a rdf:Property ;
+    rdfs:label "organization URL"@en ;
+    rdfs:comment "The web address of an organisation."@en ;
+    rdfs:domain mkv:Organization ;
+    rdfs:range xsd:anyURI .
+    
+# ------------------------------------------------------------
+# CLASSES - FICTIONAL PERSONS AND PLACES (because I am at my etc [end of thinking capacity], some pop culture reference will be made in the data file)
+# ------------------------------------------------------------
+
+mkv:FictionalPerson a rdfs:Class ;
+    rdfs:subClassOf mkv:Person ;
+    rdfs:label "Fictional Person"@en ;
+    rdfs:comment """A person who exists within a fictional work e.g a television series, 
+    novel or other narrative. Represented here as a named individual with RDF 
+    triples because the boundary between people one knows and people one 
+    feels one knows from television is philosophically unclear."""@en .
+
+mkv:Farm a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "Farm"@en ;
+    rdfs:label "Shamba"@sw ;
+    rdfs:comment """An agricultural operation. May also function as a bed and breakfast, 
+    a militia training ground, or a beet processing facility depending on ownership."""@en .
+
+mkv:GovernmentOffice a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "Government Office"@en ;
+    rdfs:comment """A department, agency, or office of a government body at any level - 
+    municipal, national, or executive. Includes departments whose director 
+    philosophically opposes the existence of government departments."""@en .
+
+mkv:PoliceStation a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "Police Station"@en ;
+    rdfs:comment "A law enforcement facility. A precinct. The 99th, for instance."@en .
+
+mkv:CommunityServiceProgramme a rdfs:Class ;
+    rdfs:subClassOf mkv:Organization ;
+    rdfs:label "Community Service Programme"@en ;
+    rdfs:comment """A structured programme of unpaid community work assigned as an 
+    alternative to custodial sentences. In at least one documented case in 
+    South London, also the site of an unexplained meteorological event conferring 
+    supernatural abilities on participants."""@en .
+
+# ------------------------------------------------------------
+# PROPERTIES - FICTIONAL PERSONS AND RELATIONSHIPS
+# ------------------------------------------------------------
+
+mkv:sourceWork a rdf:Property ;
+    rdfs:label "source work"@en ;
+    rdfs:comment """The fictional television series, film or other narrative work 
+    in which a fictional person appears. Value is a literal string naming the work."""@en ;
+    rdfs:domain mkv:FictionalPerson ;
+    rdfs:range xsd:string .
+
+mkv:hasColleague a rdf:Property ;
+    rdfs:subPropertyOf mkv:knows ;
+    rdfs:label "has colleague"@en ;
+    rdfs:comment "Relates a person to another person they work alongside."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Person .
+
+mkv:isCousinOf a rdf:Property ;
+    rdfs:subPropertyOf mkv:knows ;
+    rdfs:label "is cousin of"@en ;
+    rdfs:comment "Relates a person to their cousin."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Person .
+
+mkv:livesAt a rdf:Property ;
+    rdfs:label "lives at"@en ;
+    rdfs:comment "Relates a person to the place or organisation at which they reside."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Organization .
+
+mkv:jobTitle a rdf:Property ;
+    rdfs:label "job title"@en ;
+    rdfs:comment """The formal or claimed title of a person's role within an organisation. 
+    Note: the distinction between 'Assistant Regional Manager' and 
+    'Assistant to the Regional Manager' is legally and personally significant 
+    to at least one individual in this dataset."""@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:hasSuperpower a rdf:Property ;
+    rdfs:label "has superpower"@en ;
+    rdfs:comment """Relates a person to an extraordinary ability they possess, 
+    typically acquired through anomalous circumstances such as 
+    unexplained electrical storms during community service. 
+    Value is a literal description of the ability."""@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:politicalPhilosophy a rdf:Property ;
+    rdfs:label "political philosophy"@en ;
+    rdfs:comment """A person's stated or demonstrated political worldview. 
+    Most interesting when the person's philosophy is in direct tension 
+    with their employment - for instance, holding libertarian views 
+    while directing a government department."""@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:notableQuote a rdf:Property ;
+    rdfs:label "notable quote"@en ;
+    rdfs:comment """A memorable or characteristic statement attributed to a person. 
+    Especially valuable for fictional persons where the quote 
+    encapsulates their worldview more concisely than any description could."""@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
+
+mkv:isParentOf a rdf:Property ;
+    rdfs:subPropertyOf mkv:knows ;
+    rdfs:label "is parent of"@en ;
+    rdfs:comment "Relates a person to their child."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Person .
+
+mkv:isChildOf a rdf:Property ;
+    rdfs:subPropertyOf mkv:knows ;
+    rdfs:label "is child of"@en ;
+    rdfs:comment "Relates a person to their parent. Inverse of mkv:isParentOf."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Person ;
+    owl:inverseOf mkv:isParentOf .
+
+mkv:hasPet a rdf:Property ;
+    rdfs:label "has pet"@en ;
+    rdfs:comment "Relates a person to an animal companion they keep."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range xsd:string .
