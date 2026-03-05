@@ -599,8 +599,7 @@ mkd:NathanYoung a mkv:FictionalPerson ;
     mkv:sourceWork "Misfits, Channel 4 (UK), 2009–2011, Series 1–2" ;
     mkv:worksFor mkd:HackneyCommunityService ;
     mkv:hasInterest mkd:InterestImmortality ;
-    mkv:hasSuperpower "Immortality - cannot be killed by conventional means: recovers from death, eventually. 
-    This proved useful on several occasions and inconvenient on several others." ;
+    mkv:hasSuperpower "Immortality - cannot be killed by conventional means: recovers from death, eventually." ;
     mkv:notableQuote "We're gonna be okay. You know why? Because we are young, we are fast, and we are not going to die here. Well, I'm not gonna die here. You lot are on your own." ;
     rdfs:comment """Nathan Young is an Irish teenager assigned to community payback 
     at the Wertham Community Centre in Hackney, East London, 
