@@ -160,7 +160,7 @@ mkv:Moon a rdfs:Class ;
 
 mkv:Song a rdfs:Class ;
     rdfs:label "Song"@en ;
-    dfs:label "Wimbo"@sw ;
+    rdfs:label "Wimbo"@sw ;
     rdfs:comment "A musical composition intended to be sung, with or without instrumentation."@en .
 
 # ------------------------------------------------------------
