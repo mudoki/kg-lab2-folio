@@ -5,7 +5,7 @@ Personal linked data terms/vocabulary and profile
 ## Files
 
 - [Terms](terms.ttl) — classes and properties
-- [Instance Data](profile.ttl) — triples about me and my world
+- [Profile](profile.ttl) — triples about me and my world
 
 ## Namespaces
 
