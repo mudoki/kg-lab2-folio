@@ -143,10 +143,10 @@ mkd:InterestEtymology a mkv:Interest ;
 # ------------------------------------------------------------
 
 mkd:StayinAlive a mkv:Song ;
-    msv:songTitle "Stayin' Alive" ;
-    msv:composedBy "Barry Gibb, Robin Gibb, Maurice Gibb" ;
-    msv:performedBy "Bee Gees" ;
-    msv:releasedIn "1977"^^xsd:gYear ;
+    mkv:songTitle "Stayin' Alive" ;
+    mkv:composedBy "Barry Gibb, Robin Gibb, Maurice Gibb" ;
+    mkv:performedBy "Bee Gees" ;
+    mkv:releasedIn "1977"^^xsd:gYear ;
     rdfs:comment """Written by the Gibb brothers and performed by the Bee Gees, 
     released in 1977 as part of the Saturday Night Fever soundtrack. 
     The opening bass line is among the most recognisable in popular music. 
