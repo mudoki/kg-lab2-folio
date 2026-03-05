@@ -47,6 +47,7 @@ mkv:Instructor a rdfs:Class ;
 mkv:KnowledgeGraphsResearcher a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
     rdfs:label "Knowledge Graphs Researcher"@en ;
+    rdfs:label "Mtafiti wa grafu za maarifa"@sw ;
     rdfs:comment """A person who works with modelling vocabularies and/or ontolgies in the context of
     knowledge graphs. May overlap with Student or Instructor. 
     The existence of this class in a vocabulary about a person who is 
@@ -129,6 +130,7 @@ mkv:KnowledgeInterest a rdfs:Class ;
 
 mkv:CelestialBody a rdfs:Class ;
     rdfs:label "Celestial Body"@en ;
+    rdfs:label "Mwili wa mbinguni"@sw ;
     rdfs:comment "A naturally occurring physical entity in space - a star, planet, moon or other object."@en .
 
 mkv:Star a rdfs:Class ;
@@ -238,6 +240,7 @@ mkv:supervisesStudent a rdf:Property ;
 
 mkv:knows a rdf:Property ;
     rdfs:label "knows"@en ;
+    rdfs:label "anajua"@sw ;
     rdfs:comment "Relates a person to another person they know. Symmetric in the real world but not asserted as such here."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
@@ -373,7 +376,7 @@ mkv:GovernmentOffice a rdfs:Class ;
 mkv:PoliceStation a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
     rdfs:label "Police Station"@en ;
-    rdfs:label "Kituo cha Polisi"@en ;
+    rdfs:label "Kituo cha Polisi"@sw ;
     rdfs:comment "A law enforcement facility. A precinct. The 99th, for instance."@en .
 
 mkv:CommunityServiceProgramme a rdfs:Class ;
@@ -405,18 +408,21 @@ mkv:hasColleague a rdf:Property ;
 mkv:isCousinOf a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
     rdfs:label "is cousin of"@en ;
+    rdfs:label "ni binamu wa"@sw ;
     rdfs:comment "Relates a person to their cousin."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
 
 mkv:livesAt a rdf:Property ;
     rdfs:label "lives at"@en ;
+    rdfs:label "anaishi"@sw ;
     rdfs:comment "Relates a person to the place or organisation at which they reside."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
 
 mkv:jobTitle a rdf:Property ;
     rdfs:label "job title"@en ;
+    rdfs:label "cheo"@sw ;
     rdfs:comment """The formal or claimed title of a person's role within an organisation. 
     Note: the distinction between 'Assistant Regional Manager' and 
     'Assistant to the Regional Manager' is legally and personally significant 
@@ -435,6 +441,7 @@ mkv:hasSuperpower a rdf:Property ;
 
 mkv:politicalPhilosophy a rdf:Property ;
     rdfs:label "political philosophy"@en ;
+    rdfs:label "falsafa ya kisiasa"@sw ;
     rdfs:comment """A person's stated or demonstrated political worldview. 
     Most interesting when the person's philosophy is in direct tension 
     with their employment - for instance, holding libertarian views 
@@ -453,6 +460,7 @@ mkv:notableQuote a rdf:Property ;
 mkv:isParentOf a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
     rdfs:label "is parent of"@en ;
+    rdfs:label "ni mzazi wa"@sw ;
     rdfs:comment "Relates a person to their child."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
@@ -460,6 +468,7 @@ mkv:isParentOf a rdf:Property ;
 mkv:isChildOf a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
     rdfs:label "is child of"@en ;
+    rdfs:label "ni mtoto wa"@sw ;
     rdfs:comment "Relates a person to their parent. Inverse of mkv:isParentOf."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person ;
