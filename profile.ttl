@@ -1,0 +1,629 @@
+@prefix mkv: <https://mudoki.github.io/kg-lab2-folio/terms#> .
+@prefix mkd: <https://mudoki.github.io/kg-lab2-folio/profile#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd:   <https://www.wikidata.org/entity/> .
+
+@prefix seppe: <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> .
+@prefix ward: <https://tabulas.eu/ward/vocab.ttl#> .
+@prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#>.
+@prefix oliver: <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#>.
+
+
+
+# ------------------------------------------------------------
+# ME
+# ------------------------------------------------------------
+
+mkd:MarlinKisia
+    a mkv:Student, mkv:KnowledgeGraphsResearcher, mkv:EarlyYearsEducator ;
+    mkv:name "Marlin Kisia" ;
+    mkv:identifier "567890" ;
+    mkv:email "marlinkisia@email.com" ;
+    mkv:yearOfStudy 1 ;
+    mkv:memberOf mkd:GhentUniversity ;
+    mkv:worksFor mkd:SunflowerKindergarten ;
+    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+    mkv:hasPeer mkd:SeppeSantens, mkd:WardDeMuynck,
+                mkd:ThijsDhulster, mkd:OliverDeMeyst ;
+    mkv:hasInterest mkd:InterestKaraoke, mkd:InterestEtymology, mkd:InterestMoons,
+                    mkd:InterestExoplanets, mkd:InterestSemanticWeb ;
+    mkv:observes mkd:Europa, mkd:Titan, mkd:Ganymede,
+                 mkd:Io, mkd:ProximaCentauriB, mkd:ProximaCentauri ;
+    mkv:hasFavouriteSong mkd:StayinAlive ;
+    mkv:knows mkd:DwightSchrute, mkd:RonSwanson, mkd:CaptainHolt,
+              mkd:NathanYoung, mkd:RaulDeMaldonado, mkd:SelinaMeyer ;
+    rdfs:comment """Year 1 student, part-time kindergarten worker, 
+    and occasional builder of RDF vocabularies about herself. 
+    Subtly interested in the moons of the outer solar system and whether 
+    anything is swimming in Europa's ocean. Also very interested in etymology and karaoke. 
+    Will most definitely overuse the rdfs:comment thingy, I should know better. 
+    Too much of anything is..."""@en ;
+    rdfs:seeAlso <https://mudoki.github.io/kg-lab2-folio/terms#> .
+    
+    
+# ------------------------------------------------------------
+# INSTRUCTOR
+# ------------------------------------------------------------
+
+mkd:ElsDeVleeschauwer a mkv:Instructor ;
+    mkv:name "Els de Vleeschauwer" ;
+    mkv:worksFor mkd:GhentUniversity ;
+    mkv:supervisesStudent mkd:MarlinKisia, mkd:SeppeSantens, mkd:WardDeMuynck, mkd:ThijsDhulster, mkd:OliverDeMeyst .
+
+# ------------------------------------------------------------
+# PEERS
+# externalProfile points to a peer's webpage.
+# ------------------------------------------------------------
+
+
+# this is a blank node, to guide the structure of how to populate
+# future people I know, as soon as I have a URI
+
+_:peer1 a mkv:Peer ;
+    mkv:name "Future Student" ;
+    rdfs:comment "A peer whose profile is not yet known."@en .
+    
+# actual peers for this exercise
+
+mkd:SeppeSantens a mkv:Peer, mkv:Student ;
+    mkv:name "Seppe Santens" ;
+    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+    mkv:externalProfile "https://seppesantens.github.io/rdf-lab2/data.ttl#me"^^xsd:anyURI ;
+    rdfs:seeAlso <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> ;
+    owl:sameAs seppe:<https://seppesantens.github.io/rdf-lab2/data.ttl#me>.
+
+mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
+    mkv:name "Ward De Muynck" ;
+    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+    mkv:externalProfile "https://tabulas.eu/ward/profile.ttl#"^^xsd:anyURI ;
+    rdfs:seeAlso <https://www.tabulas.eu/ward/vocab.ttl> ;
+    owl:sameAs ward:<https://tabulas.eu/ward/#me> .
+    
+mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
+    mkv:name "Thijs Dhulster" ;
+    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+    mkv:externalProfile "https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me"^^xsd:anyURI ;
+    rdfs:seeAlso <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> ;
+    owl:sameAs thijs:<https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me> .
+    
+mkd:OliverDeMeyst a mkv:Peer, mkv:Student ;
+    mkv:name "Oliver De Meyst" ;
+    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+    mkv:externalProfile "https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#"^^xsd:anyURI ;
+    rdfs:seeAlso <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#> ;
+    owl:sameAs oliver:<https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#> .
+
+# ------------------------------------------------------------
+# INTERESTS
+# ------------------------------------------------------------
+
+mkd:InterestKaraoke a mkv:MusicInterest ;
+    mkv:interestLabel "Karaoke" ;
+    rdfs:comment """The practice of singing along to recorded music with on-screen lyrics.
+    Particularly compelling when the song selection includes late 1970s disco and lyrics 
+    can being sang in gibberish for maximum enjoyment. The intersection of this interest 
+    with mkd:StayinAlive is not a coincidence. Singing drunk can be allowed."""@en .
+
+mkd:InterestMoons a mkv:CelestialInterest ;
+    mkv:interestLabel "Natural Satellites" ;
+    rdfs:comment """Here, natural satellites orbiting planets 
+    and other bodies. Particular focus on ocean worlds: Europa and Ganymede 
+    (Jupiter system), Titan and Enceladus (Saturn system). The question of 
+    whether subsurface liquid water can sustain life is the underlying motivation."""@en .
+
+mkd:InterestExoplanets a mkv:CelestialInterest ;
+    mkv:interestLabel "Exoplanets and Habitable Zones" ;
+    rdfs:comment """Planets orbiting stars other than the Sun. Of specific interest: 
+    planets in the habitable zone of their host star, where liquid water 
+    could exist on the surface. Proxima Centauri b is the most immediately 
+    compelling example - the nearest star system to Earth hosts a potentially 
+    habitable world."""@en .
+
+mkd:InterestSemanticWeb a mkv:KnowledgeInterest ;
+    mkv:interestLabel "Semantic Web, Linked Data and Vocabularies" ;
+    rdfs:comment """The idea that data on the web can be structured, linked, and made 
+    machine-readable using RDF, RDFS, OWL, and SPARQL, among others. The fact that this 
+    interest is itself described in a vocabulary built from that same stack 
+    is either a satisfying recursion or a mild epistemological problem. 
+    Possibly both."""@en .
+    
+mkd:InterestEtymology a mkv:Interest ;
+    mkv:interestLabel "Etymology" ;
+    rdfs:comment """The study of the origin and historical development of words. 
+    For thos who enjoy continuously living in frustration why
+    algorithm and logarithm have very different origins, knowing that they share the math domain, and that does not mean that
+    they should be explained the same way. I love words, but I hate them too"""@en .
+
+# ------------------------------------------------------------
+# THE SONG - Stayin' Alive
+# Wikidata Q1352181, as specified
+# ------------------------------------------------------------
+
+mkd:StayinAlive a mkv:Song ;
+    msv:songTitle "Stayin' Alive" ;
+    msv:composedBy "Barry Gibb, Robin Gibb, Maurice Gibb" ;
+    msv:performedBy "Bee Gees" ;
+    msv:releasedIn "1977"^^xsd:gYear ;
+    rdfs:comment """Written by the Gibb brothers and performed by the Bee Gees, 
+    released in 1977 as part of the Saturday Night Fever soundtrack. 
+    The opening bass line is among the most recognisable in popular music. 
+    The song's tempo - approximately 103 beats per minute - 
+    is frequently cited in medical literature as an appropriate rhythm 
+    for performing CPR chest compressions, meaning it is simultaneously 
+    a disco classic and a public health resource. 
+    An ideal karaoke selection: high recognisability, 
+    forgiving vocal range, and a chorus that an entire room 
+    will join uninvited. Shout out to Michael Scott for mistaking it with I Will Survive - a 
+    song in a similar spirit, but not sure if a victim will actually survive with chest compressions
+    to that rhythm."""@en ;
+    owl:sameAs wd:Q1352181 .
+
+# ------------------------------------------------------------
+# CELESTIAL BODIES
+# owl:sameAs links to Wikidata ensure nodes are referenceable
+# ------------------------------------------------------------
+
+mkd:Jupiter a mkv:Planet ;
+    rdfs:label "Jupiter"@en ;
+    rdfs:comment """The largest planet in the solar system, fifth from the Sun and  a gas giant with a mass 
+    more than twice that of all other planets combined. Host to at least 95 known 
+    moons, including the four large Galilean moons discovered by Galileo in 1610."""@en ;
+    mkv:distanceFromSunAU "5.2"^^xsd:decimal ;
+    owl:sameAs wd:Q319 .
+
+mkd:Saturn a mkv:Planet ;
+    rdfs:label "Saturn"@en ;
+    rdfs:comment """The sixth planet from the Sun, a gas giant defined by its spectacular 
+    ring system. Hosts 146 known moons. Can you imagine staring at the sky in this planet?
+    Besides the stars, so many moons! Fun concepts of nights and days here, right?"""@en ;
+    mkv:distanceFromSunAU "9.58"^^xsd:decimal ;
+    owl:sameAs wd:Q193 .
+
+mkd:Europa a mkv:Moon ;
+    rdfs:label "Europa"@en ;
+    rdfs:comment """The sixth-closest moon of Jupiter and the smallest of the four 
+    Galilean moons. Slightly smaller than Earth's Moon, it has a smooth, 
+    bright icy surface with very few craters, suggesting a geologically young 
+    and active surface."""@en ;
+    mkv:orbits mkd:Jupiter ;
+    owl:sameAs wd:Q3143 .
+
+mkd:Titan a mkv:Moon ;
+    rdfs:label "Titan"@en ;
+    rdfs:comment """The largest moon of Saturn and the second-largest natural satellite 
+    in the solar system, larger than the planet Mercury."""@en ;
+    mkv:orbits mkd:Saturn ;
+    owl:sameAs wd:Q2565 .
+
+mkd:Ganymede a mkv:Moon ;
+    rdfs:label "Ganymede"@en ;
+    rdfs:comment """The largest moon in the solar system, orbiting Jupiter. 
+    Larger than the planet Mercury, though less massive. 
+    The only moon known to generate its own magnetic field, 
+    creating auroras near its poles."""@en ;
+    mkv:orbits mkd:Jupiter ;
+    owl:sameAs wd:Q3169 .
+
+mkd:Io a mkv:Moon ;
+    rdfs:label "Io"@en ;
+    rdfs:comment """The innermost of the four Galilean moons of Jupiter and 
+    the most volcanically active body in the solar system."""@en ;
+    mkv:orbits mkd:Jupiter ;
+    owl:sameAs wd:Q3123 .
+
+mkd:ProximaCentauri a mkv:Star ;
+    rdfs:label "Proxima Centauri"@en ;
+    rdfs:comment """A red dwarf star and the closest known star to the Sun
+    Exists in the constellation Centaurus. 
+    Too faint to be seen with the naked eye. Part of the Alpha Centauri triple 
+    star system. Hosts at least two known exoplanets, including Proxima Centauri b."""@en ;
+    owl:sameAs wd:Q14266 .
+
+mkd:ProximaCentauriB a mkv:Planet ;
+    rdfs:label "Proxima Centauri b"@en ;
+    rdfs:comment """An extrasolar orbiting Proxima Centauri, the nearest star to the Sun. 
+    Discovered in 2016. It orbits within the habitable zone of its host star - 
+    the range of distances where liquid water could exist on a surface - 
+    completing one orbit every 11.2 Earth days. Its prospects for habitability 
+    are debated: the planet likely faces intense ultraviolet and X-ray radiation 
+    from stellar flares, and may be tidally locked, with one hemisphere in 
+    permanent day and the other in permanent night. Nonetheless it remains 
+    the closest potentially habitable world to Earth."""@en ;
+    mkv:orbits mkd:ProximaCentauri ;
+    owl:sameAs wd:Q26692445 .
+
+# ------------------------------------------------------------
+# ORGANISATIONS
+# ------------------------------------------------------------
+
+mkd:GhentUniversity a mkv:University ;
+    mkv:organizationName "GhentUniversity" ;
+    rdfs:comment "The academic institution where Marlin Kisia is enrolled as a first-year student."@en ;
+    rdfs:comment "The university where Els de Vleeschauwer is employed as an instructor."@en .
+
+mkd:SunflowerKindergarten a mkv:Kindergarten ;
+    mkv:organizationName "Sunflower Kindergarten" ;
+    rdfs:comment """A local early childhood education centre where Marlin Kisia 
+    works part-time. Named for the sunflower garden in the yard, 
+    which the children planted and tend themselves. 
+    Age range: 3–5 years."""@en .
+    
+# ------------------------------------------------------------
+# ORGANISATIONS - FICTIONAL
+# ------------------------------------------------------------
+
+mkd:DunderMifflinScranton a mkv:Organization ;
+    mkv:organizationName "Dunder Mifflin Paper Company — Scranton Branch" ;
+    mkv:organizationUrl "https://www.dundermifflin.com"^^xsd:anyURI ;
+    rdfs:comment """The Scranton, Pennsylvania branch of Dunder Mifflin Inc., 
+    a mid-size regional paper and paper products company. 
+    Somehow survived the digital revolution, several managerial crises, 
+    a bat infestation, multiple fires, and the sustained employment 
+    of Dwight Kurt Schrute III."""@en .
+
+mkd:SchrúteFarms a mkv:Farm ;
+    mkv:organizationName "Schrute Farms" ;
+    rdfs:comment """A working beet farm and bed and breakfast located in Honesdale, 
+    Pennsylvania, operated by Dwight and Mose Schrute. 
+    Guests may participate in beet harvesting, 
+    attend a genuine Pennsylvania Dutch Christmas, 
+    or simply experience the authentic agrarian lifestyle 
+    that shaped Western civilisation. 
+    Rated the number one beet-related agritourism destination 
+    in the greater Lackawanna County area, though this ranking 
+    is self-reported. Also serves as an informal outpost 
+    for the Lackawanna County Sheriff's volunteer reserve."""@en .
+
+mkd:PawneeParksDept a mkv:GovernmentOffice ;
+    mkv:organizationName "Department of Parks and Recreation, Pawnee, Indiana" ;
+    rdfs:comment """A mid-size municipal government department in Pawnee, Indiana, 
+    responsible for the management of the city's parks, 
+    recreational facilities, and public green spaces. 
+    Notably headed, for a significant period, by a director whose 
+    stated goal was the dissolution of all government departments 
+    including his own. The department nonetheless managed to build 
+    a park."""@en .
+
+mkd:VenezuelanDelegation a mkv:GovernmentOffice ;
+    mkv:organizationName "Sister City Delegation of Boraqua, Venezuela" ;
+    rdfs:comment """The official diplomatic delegation representing Boraqua, Venezuela — 
+    sister city to Pawnee, Indiana — dispatched for a cultural exchange visit. 
+    The visit was, by most accounts, a partial success, 
+    constrained somewhat by differing expectations regarding 
+    the preparation of fish and the legal consequences thereof."""@en .
+
+mkd:Brooklyn99thPrecinct a mkv:PoliceStation ;
+    mkv:organizationName "99th Precinct, New York City Police Department" ;
+    rdfs:comment """A New York City Police Department precinct, 
+    notable for being the first in the NYPD to be commanded by 
+    an openly gay Black officer. Under Captain Raymond Holt's leadership 
+    it transformed from a departmental laughingstock 
+    into a highly functional, if idiosyncratic, law enforcement unit. 
+    Its homicide clearance rate improved substantially. 
+    Its Hallowe'en traditions became legally complicated."""@en .
+
+mkd:VPOfficeUSA a mkv:GovernmentOffice ;
+    mkv:organizationName "Office of the Vice President of the United States" ;
+    rdfs:comment """The executive office of the Vice President of the United States. 
+    A position described by its most famous fictional occupant as a 
+    'nothing job' and a 'meaningless, boring, 
+    terrible mistake' - and yet pursued with extraordinary ferocity."""@en .
+
+mkd:HackneyCommunityService a mkv:CommunityServiceProgramme ;
+    mkv:organizationName "Wertham Community Centre Community Service Programme, Hackney" ;
+    rdfs:comment """A community payback programme in the London Borough of Hackney, 
+    operating out of the Wertham Community Centre. 
+    Participants carry out unpaid work for the benefit of the local area. 
+    On one particular morning, a freak electrical storm struck a group 
+    of five participants, granting each a distinct and largely 
+    inconvenient supernatural ability. 
+    This is not reflected in any official programme documentation."""@en .
+
+
+
+    
+    
+# ------------------------------------------------------------
+# PERSONS - FICTIONAL
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# DWIGHT KURT SCHRUTE III
+# ------------------------------------------------------------
+
+mkd:DwightSchrute a mkv:FictionalPerson ;
+    mkv:name "Dwight Kurt Schrute III" ;
+    mkv:sourceWork "The Office (US), NBC, 2005–2013" ;
+    mkv:jobTitle "Assistant to the Regional Manager, Dunder Mifflin Scranton" ;
+    mkv:worksFor mkd:DunderMifflinScranton ;
+    mkv:livesAt mkd:SchrúteFarms ;
+    mkv:isCousinOf mkd:MoseSchrute ;
+    mkv:hasColleague mkd:MoseSchrute ;
+    mkv:hasInterest mkd:InterestBeetFarming ;
+    mkv:hasInterest mkd:InterestSurvivalism ;
+    mkv:hasPet "Horses (several, working)" ;
+    mkv:politicalPhilosophy "Authority, order, and the rule of the strongest - filtered through a deep reverence for the traditions of the Pennsylvania Dutch and the collected wisdom of Sun Tzu." ;
+    mkv:notableQuote "Identity theft is not a joke, Jim. Millions of families suffer every year." ;
+    rdfs:comment """Dwight Kurt Schrute III is the Assistant to the Regional Manager 
+    at the Scranton branch of Dunder Mifflin, a position he describes 
+    as Assistant Regional Manager to anyone who will listen. 
+    He is a beet farmer of genuine skill, a volunteer Sheriff's Deputy 
+    of questionable utility, a student of martial arts, 
+    and a man who has read the collected works of both Sun Tzu 
+    and the Lackawanna County Employee Handbook cover to cover. 
+    He and his cousin Mose operate Schrute Farms, 
+    a working beet operation and bed and breakfast 
+    that receives glowing reviews from people who enjoy 
+    sleeping in a room that smells of beet processing. 
+    Dwight's threat assessment capabilities are among the finest 
+    in mid-size Pennsylvania paper sales."""@en .
+
+mkd:InterestBeetFarming a mkv:Interest ;
+    mkv:interestLabel "Beet Farming" ;
+    rdfs:comment """The cultivation of Beta vulgaris, the common beet. 
+    Used in food production, sugar refining, and as a source of 
+    natural dye. In the hands of the Schrute family, elevated to 
+    something approaching a philosophy of life."""@en .
+
+mkd:InterestSurvivalism a mkv:Interest ;
+    mkv:interestLabel "Survivalism and Emergency Preparedness" ;
+    rdfs:comment """The practice of preparing for the breakdown of civil infrastructure 
+    through stockpiling supplies, learning wilderness skills, 
+    and maintaining a network of loyal associates who will know 
+    where to meet when society collapses. 
+    Distinct from paranoia in that the preparations are very thorough."""@en .
+    
+# ------------------------------------------------------------
+# MOSE SCHRUTE
+# ------------------------------------------------------------
+
+mkd:MoseSchrute a mkv:FictionalPerson ;
+    mkv:name "Mose Schrute" ;
+    mkv:sourceWork "The Office (US), NBC, 2005–2013" ;
+    mkv:livesAt mkd:SchrúteFarms ;
+    mkv:worksFor mkd:SchrúteFarms ;
+    mkv:isCousinOf mkd:DwightSchrute ;
+    mkv:hasColleague mkd:DwightSchrute ;
+    mkv:notableQuote "[runs away from approaching vehicles]" ;
+    rdfs:comment """Mose Schrute is Dwight's cousin and co-operator of Schrute Farms. 
+    He handles a substantial portion of the physical farm work 
+    and takes his responsibilities seriously, 
+    particularly those involving the welcoming of bed and breakfast guests 
+    - though his approach to hospitality differs from industry norms. 
+    He is shy around strangers, especially those arriving by car, 
+    and has developed a running technique that allows rapid 
+    departure from any social situation he finds uncomfortable. 
+    Mose is a man of few words, enormous physical capability, 
+    and a genuine affinity for the agricultural life. 
+    His inner world remains largely undocumented."""@en .
+
+# ------------------------------------------------------------
+# RON ULYSSES SWANSON
+# ------------------------------------------------------------
+
+mkd:RonSwanson a mkv:FictionalPerson ;
+    mkv:name "Ron Ulysses Swanson" ;
+    mkv:sourceWork "Parks and Recreation, NBC, 2009–2015" ;
+    mkv:jobTitle "Director, Department of Parks and Recreation, Pawnee, Indiana" ;
+    mkv:worksFor mkd:PawneeParksDept ;
+    mkv:hasInterest mkd:InterestWoodworking ;
+    mkv:hasInterest mkd:InterestMeat ;
+    mkv:politicalPhilosophy "Libertarianism. The government should be dissolved. Ron continues to work for the government in order to ensure it does as little as possible while he is in charge of it. He considers this a form of public service." ;
+    mkv:notableQuote "I have been developing my own philosophy of life. It's based on the maxim: never half-ass two things. Whole-ass one thing." ;
+    # the quote here has been integrated in my life's developin/evolving philosophy
+    rdfs:comment """Ron Ulysses Swanson is the Director of the Pawnee Parks and Recreation 
+    Department, a position he has held with magnificent indifference to 
+    the department's nominal purpose. Ron is a libertarian who believes 
+    that all government is wasteful, all government employees are parasites, 
+    and all government initiatives are solutions to problems that would 
+    have resolved themselves. He is also an extraordinary craftsman - 
+    his handmade wooden furniture is of museum quality - 
+    a hunter and fisherman of serious skill, 
+    a consumer of red meat at volumes that have alarmed physicians, 
+    and a man who once ate an entire meal at a steakhouse while describing 
+    the experience as the closest thing to a religious experience 
+    available in Pawnee, Indiana. 
+    Ron does not use social media. Ron does not trust social media. 
+    The fact that Ron appears in a linked data graph 
+    would displease him enormously."""@en .
+
+mkd:InterestWoodworking a mkv:Interest ;
+    mkv:interestLabel "Woodworking and Furniture" ;
+    rdfs:comment """The craft of shaping wood into functional and aesthetic objects. 
+    Ron Swanson's woodworking is entirely hand-tool based - 
+    no power tools, no shortcuts, no Swedish furniture assembly manuals. 
+    He has made chairs, tables, a canoe, and at least one crib 
+    to a standard that would embarrass professionals."""@en .
+
+mkd:InterestMeat a mkv:Interest ;
+    mkv:interestLabel "Meat. All of it." ;
+    rdfs:comment """A deep and sincere interest in the consumption of animal protein 
+    in all its forms, but particularly beef, venison, and breakfast foods 
+    involving bacon. Ron Swanson's relationship with vegetables is one of 
+    principled non-engagement, except where a vegetable is used to 
+    support or deliver meat."""@en .
+
+# ------------------------------------------------------------
+# RAUL ALEJANDRO BASTILLA PEDRO DE VELOSO DE MALDONADO
+# ------------------------------------------------------------
+
+mkd:RaulDeMaldonado a mkv:FictionalPerson ;
+    mkv:name "Raul Alejandro Bastilla Pedro de Veloso de Maldonado" ;
+    mkv:sourceWork "Parks and Recreation, NBC - Season 3, Episode 7: 'Sister City'" ;
+    mkv:worksFor mkd:VenezuelanDelegation ;
+    mkv:jobTitle "Senior Government Official, Sister City Delegation of Boraqua, Venezuela" ;
+    mkv:notableQuote "This is outrageous. Where are the armed men who come in to take the protestors away?
+    Where are they? This kind of behavior is never tolerated in Baraqua. You shout like that they put you in jail. 
+    Right away. No trial, no nothing. Journalists, we have a special jail for journalists. 
+    You are stealing: right to jail. You are playing music too loud: right to jail, right away. 
+    Driving too fast: jail. Slow: jail. You are charging too high prices for sweaters, glasses: you right to jail. 
+    YOU UNDERCOOK FISH? BELIEVE IT OR NOT, JAIL. YOU OVERCOOK CHICKEN, ALSO JAIL. UNDERCOOK, OVERCOOK.
+    You make an appointment with the dentist and you don't show up, believe it or not, jail, right away. 
+    We have the best patients in the world because of jail." ;
+    rdfs:comment """Raul Alejandro Bastilla Pedro de Veloso de Maldonado is a senior 
+    representative of Boraqua, Venezuela, dispatched to Pawnee, Indiana 
+    as part of an official sister city cultural exchange. 
+    He arrived with high expectations of American institutional competence 
+    and departed with a more nuanced view. 
+    His most significant contribution to cross-cultural understanding 
+    was his explanation of Venezuelan food safety legislation, 
+    specifically as it pertains to chicken preparation: 
+    both undercooking and overcooking are criminal offences 
+    carrying custodial sentences. 
+    The standard of doneness required by Venezuelan law is, 
+    accordingly, exact. This regulatory framework 
+    has not been adopted by the United States, 
+    though Pawnee's Health Department found it thought-provoking."""@en ;
+    mkv:knows mkd:RonSwanson .
+
+# ------------------------------------------------------------
+# CAPTAIN RAYMOND JACOB HOLT
+# ------------------------------------------------------------
+
+mkd:CaptainHolt a mkv:FictionalPerson ;
+    mkv:name "Raymond Jacob Holt" ;
+    mkv:sourceWork "Brooklyn Nine-Nine, NBC/Fox, 2013–2021" ;
+    mkv:jobTitle "Captain, 99th Precinct, NYPD" ;
+    mkv:worksFor mkd:Brooklyn99thPrecinct ;
+    mkv:hasInterest mkd:InterestClassicalMusic ;
+    mkv:hasInterest mkd:InterestCorgiDogs ;
+    mkv:hasPet "Cheddar (Welsh Corgi, pedigree, exemplary)" ;
+    mkv:notableQuote "Wuntch. You just made my list." ;
+    rdfs:comment """Captain Raymond Jacob Holt is the commanding officer of the 
+    NYPD's 99th Precinct in Brooklyn, and the first openly gay Black 
+    officer to command a precinct in the department's history. 
+    He spent decades being denied promotion by a department that was 
+    not ready for him; he is ready for the department to catch up. 
+    Captain Holt communicates entirely in a flat, uninflected monotone 
+    that conveys an extraordinarily wide emotional range 
+    if you know what to listen for. 
+    He is married to Professor Kevin Cozner, 
+    a classicist at Columbia University, 
+    and is the devoted companion of Cheddar, 
+    a Welsh Corgi of refined temperament and remarkable escape capability. 
+    His adversarial relationship with Deputy Commissioner Madeline Wuntch 
+    is one of the great institutional feuds in New York municipal history. 
+    He considers the word 'bone' to be hilarious in exactly one context."""@en .
+
+mkd:InterestClassicalMusic a mkv:MusicInterest ;
+    mkv:interestLabel "Classical Music" ;
+    rdfs:comment """Western art music of the common practice period and beyond. 
+    Captain Holt's musical interests are sophisticated, 
+    wide-ranging, and entirely at odds with those of his detectives, 
+    who predominantly listen to things he finds difficult to classify."""@en .
+
+mkd:InterestCorgiDogs a mkv:Interest ;
+    mkv:interestLabel "Welsh Corgi dogs, specifically Cheddar" ;
+    rdfs:comment """The Pembroke Welsh Corgi - a herding breed of remarkable intelligence, 
+    loyalty, and architectural compactness. Cheddar in particular 
+    has demonstrated problem-solving abilities that suggest 
+    a level of cognition that challenges simplistic 
+    human-canine intelligence hierarchies."""@en .
+
+# ------------------------------------------------------------
+# SELINA CATHERINE MEYER
+# ------------------------------------------------------------
+
+mkd:SelinaMeyer a mkv:FictionalPerson ;
+    mkv:name "Selina Catherine Meyer" ;
+    mkv:sourceWork "Veep, HBO, 2012–2019" ;
+    mkv:jobTitle "Vice President of the United States (former); President of the United States (former, twice)" ;
+    mkv:worksFor mkd:VPOfficeUSA ;
+    mkv:isParentOf mkd:CatherineMeyer ;
+    mkv:hasInterest mkd:InterestPoliticalPower ;
+    mkv:notableQuote "I'm not going to be Vice President of the United States of America. I am not gonna do it. Because the Vice President is a nothing. The Vice President is a spare wheel on the car of state." ;
+    rdfs:comment """Selina Meyer served as the 47th Vice President of the United States, 
+    the 45th President of the United States (briefly), 
+    and subsequently as President again under circumstances 
+    that became constitutionally complicated. 
+    She is a politician of ferocious ambition, 
+    breathtaking self-absorption, 
+    and genuine occasional competence, 
+    deployed at moments that never quite correspond 
+    to when competence is needed. 
+    Her staff occupy a peculiar professional purgatory - 
+    each one's career is both dependent on her success 
+    and permanently damaged by proximity to it. 
+    Her relationship with her daughter Catherine 
+    is characterised by warmth in public statements 
+    and a somewhat more complicated dynamic in practice."""@en .
+
+mkd:InterestPoliticalPower a mkv:Interest ;
+    mkv:interestLabel "Political Power and the Presidency" ;
+    rdfs:comment """The accumulation, exercise, and preservation of political authority 
+    at the highest levels of the United States executive branch. 
+    In Selina Meyer's case, this interest preceded all other interests 
+    and frequently supplanted them, including interests in 
+    policy, governance, other people, and occasionally basic nutrition."""@en .
+
+# ------------------------------------------------------------
+# CATHERINE MEYER
+# ------------------------------------------------------------
+
+mkd:CatherineMeyer a mkv:FictionalPerson ;
+    mkv:name "Catherine Meyer" ;
+    mkv:sourceWork "Veep, HBO, 2012–2019" ;
+    mkv:isChildOf mkd:SelinaMeyer ;
+    mkv:hasInterest mkd:InterestDocumentaryFilm ;
+    mkv:notableQuote "I'm making a documentary about you, Mom. I think it's going to be really powerful." ;
+    rdfs:comment """Catherine Meyer is the daughter of Selina Meyer 
+    and the person in the room most often described as 
+    'not really the focus right now' despite being present at 
+    several historically significant moments of her mother's career. 
+    She is a documentary filmmaker with a genuine eye for 
+    the revealing detail and the inconvenient truth, 
+    which makes her simultaneously the most clear-sighted 
+    person in her immediate family 
+    and the one least consulted. 
+    Her documentary project following her mother's administration 
+    was never screened to its subject in advance. 
+    This was probably wise."""@en .
+
+mkd:InterestDocumentaryFilm a mkv:Interest ;
+    mkv:interestLabel "Documentary Filmmaking" ;
+    rdfs:comment """The practice of making non-fiction films that document reality - 
+    people, events, institutions, and the gap between 
+    what those institutions claim to be doing 
+    and what they are actually doing. 
+    In Catherine Meyer's hands, subject matter is close to home."""@en .
+
+# ------------------------------------------------------------
+# NATHAN YOUNG
+# ------------------------------------------------------------
+
+mkd:NathanYoung a mkv:FictionalPerson ;
+    mkv:name "Nathan Young" ;
+    mkv:sourceWork "Misfits, Channel 4 (UK), 2009–2011, Series 1–2" ;
+    mkv:worksFor mkd:HackneyCommunityService ;
+    mkv:hasInterest mkd:InterestImmortality ;
+    mkv:hasSuperpower "Immortality - cannot be killed by conventional means: recovers from death, eventually. 
+    This proved useful on several occasions and inconvenient on several others." ;
+    mkv:notableQuote "We're gonna be okay. You know why? Because we are young, we are fast, and we are not going to die here. Well, I'm not gonna die here. You lot are on your own." ;
+    rdfs:comment """Nathan Young is an Irish teenager assigned to community payback 
+    at the Wertham Community Centre in Hackney, East London, 
+    following a minor offence. 
+    During his service, a freak electrical storm struck the group, 
+    granting each participant a power related in some opaque way 
+    to their psychological state. Nathan's power - 
+    eventually revealed to be immortality - 
+    was slower to manifest than those of his peers, 
+    which he took with characteristic philosophical equanimity 
+    and catastrophic overconfidence. 
+    He is sarcastic, irreverent, frequently wrong in his judgements, 
+    occasionally right in ways that matter, 
+    and constitutionally incapable of taking any situation 
+    as seriously as it deserves. 
+    He has died multiple times and considers this, 
+    on reflection, only moderately inconvenient."""@en .
+
+mkd:InterestImmortality a mkv:Interest ;
+    mkv:interestLabel "Immortality (involuntary, non-transferable)" ;
+    rdfs:comment """The condition of being unable to die from conventional causes. 
+    An interest necessarily rather than elected. 
+    Nathan Young did not choose immortality as an area of personal focus; 
+    it chose him. He has since developed views on the subject, 
+    most of which involve the words 'it's actually not as great as you'd think'.
+    It's also got the side-effect of seeing dead people."""@en .
