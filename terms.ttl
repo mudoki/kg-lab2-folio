@@ -1,4 +1,4 @@
-@prefix mkv: <https://mudoki.github.io/kg-lab2-folio/terms#> .
+@prefix mkv: <https://mudoki.github.io/kg-lab2-folio/terms.ttl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
@@ -11,17 +11,17 @@
 # ONTOLOGY METADATA
 # ------------------------------------------------------------
 
-<https://mudoki.github.io/kg-lab2-folio/terms>
+<https://mudoki.github.io/kg-lab2-folio/terms.ttl>
     a owl:Ontology ;
     rdfs:label "Marlin Kisia Personal Vocabulary"@en ;
     rdfs:comment """A vocabulary for describing persons, their interests, 
     affiliations and possible connections. Mostly for academic contexts, celestial 
     interests, musical taste, fictional TV characters and the architecture for linking to peers 
     who maintain their own personal profiles. Some parts have a swahili equivalent."""@en ;
-    dcterms:creator <https://mudoki.github.io/data#MarlinKisia> ;
+    dcterms:creator <https://mudoki.github.io/kg-lab2-folio/profile.ttl#MarlinKisia> ;
     dcterms:created "2026-03-03"^^xsd:date ;
     vann:preferredNamespacePrefix "mkv" ;
-    vann:preferredNamespaceUri "https://mudoki.github.io/kg-lab2-folio/terms#"^^xsd:anyURI .
+    vann:preferredNamespaceUri "https://mudoki.github.io/kg-lab2-folio/terms.ttl#"^^xsd:anyURI .
 
 # ------------------------------------------------------------
 # CLASSES - PERSONS
