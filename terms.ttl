@@ -161,8 +161,7 @@ mkv:name a rdf:Property ;
     rdfs:range xsd:string .
 
 mkv:email a rdf:Property ;
-    rdfs:label "email"@en ;
-    rdfs:label "baruapepe"@sw ;
+    rdfs:label "email"@en, "baruapepe"@sw ;
     rdfs:comment "The email address of a person."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range xsd:string .
