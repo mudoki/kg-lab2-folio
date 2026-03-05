@@ -55,8 +55,8 @@ mkv:KnowledgeGraphsResearcher a rdfs:Class ;
 mkv:EarlyYearsEducator a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
     rdfs:label "Early Years Educator"@en ;
-    rdfs:comment "A person who works in an early childhood education setting such as a kindergarten. A
-    more personal tone, as I terribly miss my nephew"@en .
+    rdfs:comment """A person who works in an early childhood education setting such as a kindergarten. A
+    more personal tone, as I terribly miss my nephew"""@en .
 
 mkv:Peer a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
