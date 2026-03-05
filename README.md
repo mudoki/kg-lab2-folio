@@ -9,5 +9,5 @@ Personal linked data terms/vocabulary and profile
 
 ## Namespaces
 
-- Terms: `https://mudoki.github.io/kg-lab2-folio/terms#`
-- Profile: `https://mudoki.github.io/kg-lab2-folio/profile#`
+- Terms: `https://mudoki.github.io/kg-lab2-folio/terms.ttl#`
+- Profile: `https://mudoki.github.io/kg-lab2-folio/profile.ttl#`
