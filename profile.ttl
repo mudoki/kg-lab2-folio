@@ -8,8 +8,8 @@
 
 @prefix seppe: <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> .
 @prefix ward: <https://tabulas.eu/ward/vocab.ttl#> .
-@prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#>.
-@prefix oliver: <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#>.
+@prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> .
+@prefix oliver: <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#> .
 
 
 
