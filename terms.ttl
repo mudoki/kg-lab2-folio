@@ -298,8 +298,8 @@ mkv:distanceFromSunAU a rdf:Property ;
 
 mkv:hasFavouriteSong a rdf:Property ;
     rdfs:label "has favourite song"@en ;
-    rdfs:comment "RRelates a person to a song they particularly like. Especially relevant for karaoke enthusiasts. 
-    Disco-era classics are well represented in this dataset."@en ;
+    rdfs:comment """Relates a person to a song they particularly like. Especially relevant for karaoke enthusiasts.
+    Disco-era classics are well represented in this dataset."""@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Song .
 
