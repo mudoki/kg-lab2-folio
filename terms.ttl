@@ -148,7 +148,7 @@ mkv:Planet a rdfs:Class ;
 mkv:Moon a rdfs:Class ;
     rdfs:subClassOf mkv:CelestialBody ;
     rdfs:label "Moon"@en ;
-    rdfs:label "Mwezi"@sw
+    rdfs:label "Mwezi"@sw ;
     rdfs:comment """A natural satellite orbiting a planet or other body. 
     Some moons e.g Europa, Titan, Ganymede, Enceladus - are of profound 
     scientific interest due to subsurface oceans, atmospheres and 
