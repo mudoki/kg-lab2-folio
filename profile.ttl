@@ -73,7 +73,7 @@ mkd:SeppeSantens a mkv:Peer, mkv:Student ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile "https://seppesantens.github.io/rdf-lab2/data.ttl#me"^^xsd:anyURI ;
     rdfs:seeAlso <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> ;
-    owl:sameAs seppe:<https://seppesantens.github.io/rdf-lab2/data.ttl#me>.
+    owl:sameAs seppe:<https://seppesantens.github.io/rdf-lab2/data.ttl#me> .
 
 mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
     mkv:name "Ward De Muynck" ;
