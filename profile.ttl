@@ -336,14 +336,13 @@ mkd:HackneyCommunityService a mkv:CommunityServiceProgramme ;
 
 mkd:DwightSchrute a mkv:FictionalPerson ;
     mkv:name "Dwight Kurt Schrute III" ;
-    mkv:sourceWork "The Office (US), NBC, 2005–2013" ;
+    mkv:sourceWork "The Office" ;
     mkv:jobTitle "Assistant to the Regional Manager, Dunder Mifflin Scranton" ;
     mkv:worksFor mkd:DunderMifflinScranton ;
     mkv:livesAt mkd:SchrúteFarms ;
     mkv:isCousinOf mkd:MoseSchrute ;
     mkv:hasColleague mkd:MoseSchrute ;
-    mkv:hasInterest mkd:InterestBeetFarming ;
-    mkv:hasInterest mkd:InterestSurvivalism ;
+    mkv:hasInterest mkd:InterestBeetFarming, mkd:InterestSurvivalism ;
     mkv:hasPet "Horses (several, working)" ;
     mkv:politicalPhilosophy "Authority, order, and the rule of the strongest - filtered through a deep reverence for the traditions of the Pennsylvania Dutch and the collected wisdom of Sun Tzu." ;
     mkv:notableQuote "Identity theft is not a joke, Jim. Millions of families suffer every year." ;
@@ -382,7 +381,7 @@ mkd:InterestSurvivalism a mkv:Interest ;
 
 mkd:MoseSchrute a mkv:FictionalPerson ;
     mkv:name "Mose Schrute" ;
-    mkv:sourceWork "The Office (US), NBC, 2005–2013" ;
+    mkv:sourceWork "The Office" ;
     mkv:livesAt mkd:SchrúteFarms ;
     mkv:worksFor mkd:SchrúteFarms ;
     mkv:isCousinOf mkd:DwightSchrute ;
@@ -406,14 +405,13 @@ mkd:MoseSchrute a mkv:FictionalPerson ;
 
 mkd:RonSwanson a mkv:FictionalPerson ;
     mkv:name "Ron Ulysses Swanson" ;
-    mkv:sourceWork "Parks and Recreation, NBC, 2009–2015" ;
+    mkv:sourceWork "Parks and Recreation" ;
     mkv:jobTitle "Director, Department of Parks and Recreation, Pawnee, Indiana" ;
     mkv:worksFor mkd:PawneeParksDept ;
-    mkv:hasInterest mkd:InterestWoodworking ;
-    mkv:hasInterest mkd:InterestMeat ;
+    mkv:hasInterest mkd:InterestWoodworking, mkd:InterestMeat ;
     mkv:politicalPhilosophy "Libertarianism. The government should be dissolved. Ron continues to work for the government in order to ensure it does as little as possible while he is in charge of it. He considers this a form of public service." ;
     mkv:notableQuote "I have been developing my own philosophy of life. It's based on the maxim: never half-ass two things. Whole-ass one thing." ;
-    # the quote here has been integrated in my life's developin/evolving philosophy
+    # the quote here has been integrated in my life's developing/evolving philosophy
     rdfs:comment """Ron Ulysses Swanson is the Director of the Pawnee Parks and Recreation 
     Department, a position he has held with magnificent indifference to 
     the department's nominal purpose. Ron is a libertarian who believes 
@@ -452,11 +450,11 @@ mkd:InterestMeat a mkv:Interest ;
 
 mkd:RaulDeMaldonado a mkv:FictionalPerson ;
     mkv:name "Raul Alejandro Bastilla Pedro de Veloso de Maldonado" ;
-    mkv:sourceWork "Parks and Recreation, NBC - Season 3, Episode 7: 'Sister City'" ;
+    mkv:sourceWork "Parks and Recreation'" ;
     mkv:worksFor mkd:VenezuelanDelegation ;
     mkv:jobTitle "Senior Government Official, Sister City Delegation of Boraqua, Venezuela" ;
     mkv:notableQuote """This is outrageous. Where are the armed men who come in to take the protestors away?
-    Where are they? This kind of behavior is never tolerated in Baraqua. You shout like that they put you in jail. 
+    Where are they? This kind of behavior is never tolerated in Boraqua. You shout like that they put you in jail. 
     Right away. No trial, no nothing. Journalists, we have a special jail for journalists. 
     You are stealing: right to jail. You are playing music too loud: right to jail, right away. 
     Driving too fast: jail. Slow: jail. You are charging too high prices for sweaters, glasses: you right to jail. 
@@ -485,11 +483,10 @@ mkd:RaulDeMaldonado a mkv:FictionalPerson ;
 
 mkd:CaptainHolt a mkv:FictionalPerson ;
     mkv:name "Raymond Jacob Holt" ;
-    mkv:sourceWork "Brooklyn Nine-Nine, NBC/Fox, 2013–2021" ;
+    mkv:sourceWork "Brooklyn Nine-Nine" ;
     mkv:jobTitle "Captain, 99th Precinct, NYPD" ;
     mkv:worksFor mkd:Brooklyn99thPrecinct ;
-    mkv:hasInterest mkd:InterestClassicalMusic ;
-    mkv:hasInterest mkd:InterestCorgiDogs ;
+    mkv:hasInterest mkd:InterestClassicalMusic, mkd:InterestCorgiDogs ;
     mkv:hasPet "Cheddar (Welsh Corgi, pedigree, exemplary)" ;
     mkv:notableQuote "Wuntch. You just made my list." ;
     rdfs:comment """Captain Raymond Jacob Holt is the commanding officer of the 
@@ -529,7 +526,7 @@ mkd:InterestCorgiDogs a mkv:Interest ;
 
 mkd:SelinaMeyer a mkv:FictionalPerson ;
     mkv:name "Selina Catherine Meyer" ;
-    mkv:sourceWork "Veep, HBO, 2012–2019" ;
+    mkv:sourceWork "Veep" ;
     mkv:jobTitle "Vice President of the United States (former); President of the United States (former, twice)" ;
     mkv:worksFor mkd:VPOfficeUSA ;
     mkv:isParentOf mkd:CatherineMeyer ;
@@ -565,7 +562,7 @@ mkd:InterestPoliticalPower a mkv:Interest ;
 
 mkd:CatherineMeyer a mkv:FictionalPerson ;
     mkv:name "Catherine Meyer" ;
-    mkv:sourceWork "Veep, HBO, 2012–2019" ;
+    mkv:sourceWork "Veep" ;
     mkv:isChildOf mkd:SelinaMeyer ;
     mkv:hasInterest mkd:InterestDocumentaryFilm ;
     mkv:notableQuote "I'm making a documentary about you, Mom. I think it's going to be really powerful." ;
@@ -596,7 +593,7 @@ mkd:InterestDocumentaryFilm a mkv:Interest ;
 
 mkd:NathanYoung a mkv:FictionalPerson ;
     mkv:name "Nathan Young" ;
-    mkv:sourceWork "Misfits, Channel 4 (UK), 2009–2011, Series 1–2" ;
+    mkv:sourceWork "Misfits" ;
     mkv:worksFor mkd:HackneyCommunityService ;
     mkv:hasInterest mkd:InterestImmortality ;
     mkv:hasSuperpower "Immortality - cannot be killed by conventional means: recovers from death, eventually." ;
@@ -622,7 +619,7 @@ mkd:InterestImmortality a mkv:Interest ;
     mkv:interestLabel "Immortality (involuntary, non-transferable)" ;
     rdfs:comment """The condition of being unable to die from conventional causes. 
     An interest necessarily rather than elected. 
-    Nathan Young did not choose immortality as an area of personal focus; 
+    Nathan Young did not choose immortality as an area of personal focus,
     it chose him. He has since developed views on the subject, 
     most of which involve the words 'it's actually not as great as you'd think'.
-    It's also got the side-effect of seeing dead people."""@en .
+    It's also has got the lovely side-effect of seeing dead people."""@en .
