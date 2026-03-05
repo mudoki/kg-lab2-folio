@@ -28,26 +28,22 @@
 # ------------------------------------------------------------
 
 mkv:Person a rdfs:Class ;
-    rdfs:label "Person"@en ;
-    rdfs:label "Mtu"@sw ;
+    rdfs:label "Person"@en, "Mtu"@sw ;
     rdfs:comment "A human being. The root class for all person types in this vocabulary."@en .
 
 mkv:Student a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
-    rdfs:label "Student"@en ;
-    rdfs:label "Mwanafunzi"@sw ;
+    rdfs:label "Student"@en, "Mwanafunzi"@sw ;
     rdfs:comment "A person enrolled in an academic programme at a university or institution."@en .
 
 mkv:Instructor a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
-    rdfs:label "Instructor"@en ;
-    rdfs:label "Mwalimu"@sw ;
+    rdfs:label "Instructor"@en, "Mwalimu"@sw ;
     rdfs:comment "A person who teaches or supervises students in a laboratory or course context."@en .
 
 mkv:KnowledgeGraphsResearcher a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
-    rdfs:label "Knowledge Graphs Researcher"@en ;
-    rdfs:label "Mtafiti wa grafu za maarifa"@sw ;
+    rdfs:label "Knowledge Graphs Researcher"@en, "Mtafiti wa grafu za maarifa - yani Knowledge Graph"@sw ;
     rdfs:comment """A person who works with modelling vocabularies and/or ontolgies in the context of
     knowledge graphs. May overlap with Student or Instructor. 
     The existence of this class in a vocabulary about a person who is 
@@ -61,8 +57,7 @@ mkv:EarlyYearsEducator a rdfs:Class ;
 
 mkv:Peer a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
-    rdfs:label "Peer"@en ;
-    rdfs:label "Rika"@sw ;
+    rdfs:label "Peer"@en, "Rika"@sw ;
     rdfs:comment """A person known to the subject, typically a fellow student or colleague, 
     who may maintain their own linked data profile at an external URI. 
     The mkv:externalProfile property is used to link to that profile when available."""@en .
@@ -72,26 +67,22 @@ mkv:Peer a rdfs:Class ;
 # ------------------------------------------------------------
 
 mkv:Organization a rdfs:Class ;
-    rdfs:label "Organization"@en ;
-    rdfs:label "Shirika"@sw ;
+    rdfs:label "Organization"@en, "Shirika"@sw ;
     rdfs:comment "A structured body of people with a shared purpose."@en .
 
 mkv:University a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
-    rdfs:label "University"@en ;
-    rdfs:label "Chuo Kikuu"@sw ;
+    rdfs:label "University"@en, "Chuo Kikuu"@sw ;
     rdfs:comment "A higher education institution offering degrees and conducting research."@en .
 
 mkv:ResearchInstitution a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
-    rdfs:label "Research Institution"@en ;
-    rdfs:label "Taasisi ya Utafiti"@sw ;
+    rdfs:label "Research Institution"@en, "Taasisi ya Utafiti"@sw ;
     rdfs:comment "An organisation whose primary activity is research."@en .
 
 mkv:Kindergarten a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
-    rdfs:label "Kindergarten"@en ;
-    rdfs:label "Shule ya Chekechea"@sw ;
+    rdfs:label "Kindergarten"@en, "Shule ya Chekechea"@sw ;
     rdfs:comment "An early childhood education setting for young children, typically ages 3–6."@en .
 
 # ------------------------------------------------------------
@@ -99,8 +90,7 @@ mkv:Kindergarten a rdfs:Class ;
 # ------------------------------------------------------------
 
 mkv:Interest a rdfs:Class ;
-    rdfs:label "Interest"@en ;
-    rdfs:label "Maslahi"@sw ;
+    rdfs:label "Interest"@en, "Shauku"@sw ;
     rdfs:comment "A topic, domain, or activity that a person is interested in or enthusiastic about."@en .
 
 mkv:CelestialInterest a rdfs:Class ;
@@ -129,28 +119,24 @@ mkv:KnowledgeInterest a rdfs:Class ;
 # ------------------------------------------------------------
 
 mkv:CelestialBody a rdfs:Class ;
-    rdfs:label "Celestial Body"@en ;
-    rdfs:label "Mwili wa mbinguni"@sw ;
+    rdfs:label "Celestial Body"@en, "Gimba la angani"@sw ;
     rdfs:comment "A naturally occurring physical entity in space - a star, planet, moon or other object."@en .
 
 mkv:Star a rdfs:Class ;
     rdfs:subClassOf mkv:CelestialBody ;
-    rdfs:label "Star"@en ;
-    rdfs:label "Nyota"@sw ;
+    rdfs:label "Star"@en, "Nyota"@sw ;
     rdfs:comment "A luminous sphere of plasma held together by gravity. The Sun is the nearest example."@en .
 
 mkv:Planet a rdfs:Class ;
     rdfs:subClassOf mkv:CelestialBody ;
-    rdfs:label "Planet"@en ;
-    rdfs:label "Sayari"@en ;
+    rdfs:label "Planet"@en, "Sayari"@en ;
     rdfs:comment """A celestial body orbiting a star that has sufficient mass to be 
     roughly spherical and has cleared its orbital neighbourhood. 
     Includes exoplanets orbiting stars other than the Sun."""@en .
 
 mkv:Moon a rdfs:Class ;
     rdfs:subClassOf mkv:CelestialBody ;
-    rdfs:label "Moon"@en ;
-    rdfs:label "Mwezi"@sw ;
+    rdfs:label "Moon"@en, "Mwezi"@sw ;
     rdfs:comment """A natural satellite orbiting a planet or other body. 
     Some moons e.g Europa, Titan, Ganymede, Enceladus - are of profound 
     scientific interest due to subsurface oceans, atmospheres and 
@@ -161,8 +147,7 @@ mkv:Moon a rdfs:Class ;
 # ------------------------------------------------------------
 
 mkv:Song a rdfs:Class ;
-    rdfs:label "Song"@en ;
-    rdfs:label "Wimbo"@sw ;
+    rdfs:label "Song"@en, "Wimbo"@sw ;
     rdfs:comment "A musical composition intended to be sung, with or without instrumentation."@en .
 
 # ------------------------------------------------------------
@@ -170,8 +155,7 @@ mkv:Song a rdfs:Class ;
 # ------------------------------------------------------------
 
 mkv:name a rdf:Property ;
-    rdfs:label "name"@en ;
-    rdfs:label "jina"@sw ;
+    rdfs:label "name"@en, "jina"@sw ;
     rdfs:comment "The full name of a person."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range xsd:string .
@@ -184,21 +168,19 @@ mkv:email a rdf:Property ;
     rdfs:range xsd:string .
 
 mkv:identifier a rdf:Property ;
-    rdfs:label "identifier"@en ;
+    rdfs:label "identifier"@en, "kitambulisho"@sw ;
     rdfs:comment "A unique identifier assigned to a person within an institutional context, such as a student number."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range xsd:string .
 
 mkv:memberOf a rdf:Property ;
-    rdfs:label "member of"@en ;
-    rdfs:label "mwanachama wa"@en ;
+    rdfs:label "member of"@en, "mwanachama wa"@en ;
     rdfs:comment "Relates a person to an organisation of which they are a formal member."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
 
 mkv:worksFor a rdf:Property ;
-    rdfs:label "works for"@en ;
-    rdfs:labeel "anafanya kazi"@sw ;
+    rdfs:label "works for"@en, "anafanyia kazi"@sw ;
     rdfs:comment "Relates a person to an organisation for which they work, paid or voluntary."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
@@ -239,16 +221,14 @@ mkv:supervisesStudent a rdf:Property ;
 # ------------------------------------------------------------
 
 mkv:knows a rdf:Property ;
-    rdfs:label "knows"@en ;
-    rdfs:label "anajua"@sw ;
+    rdfs:label "knows"@en, "anajua"@sw ;
     rdfs:comment "Relates a person to another person they know. Symmetric in the real world but not asserted as such here."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
 
 mkv:hasPeer a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
-    rdfs:label "has peer"@en ;
-    rdfs:label "ana rika"@sw ;
+    rdfs:label "has peer"@en, "ana rika"@sw ;
     rdfs:comment """Relates a person to a peer - a fellow student or colleague 
     who may maintain a linked data profile at an external URI."""@en ;
     rdfs:domain mkv:Person ;
@@ -266,7 +246,7 @@ mkv:externalProfile a rdf:Property ;
 # ------------------------------------------------------------
 
 mkv:hasInterest a rdf:Property ;
-    rdfs:label "has interest"@en ;
+    rdfs:label "has interest"@en, "ana shauku"@sw ;
     rdfs:comment "Relates a person to a topic, domain, or activity they are interested in."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Interest .
@@ -284,7 +264,7 @@ mkv:observes a rdf:Property ;
     rdfs:range mkv:CelestialBody .
 
 mkv:orbits a rdf:Property ;
-    rdfs:label "orbits"@en ;
+    rdfs:label "orbits"@en, "inazunguka"@sw ;
     rdfs:comment "Relates a celestial body to the larger body it orbits. Europa orbits Jupiter; Proxima Centauri b orbits Proxima Centauri."@en ;
     rdfs:domain mkv:CelestialBody ;
     rdfs:range mkv:CelestialBody .
@@ -307,19 +287,19 @@ mkv:hasFavouriteSong a rdf:Property ;
     rdfs:range mkv:Song .
 
 mkv:songTitle a rdf:Property ;
-    rdfs:label "song title"@en ;
+    rdfs:label "song title"@en, "jina la wimbo"@sw ;
     rdfs:comment "The title of a song."@en ;
     rdfs:domain mkv:Song ;
     rdfs:range xsd:string .
 
 mkv:composedBy a rdf:Property ;
-    rdfs:label "composed by"@en ;
+    rdfs:label "composed by"@en, "imetungwa na"@sw ;
     rdfs:comment "The composer or production team responsible for writing and producing a song."@en ;
     rdfs:domain mkv:Song ;
     rdfs:range xsd:string .
 
 mkv:performedBy a rdf:Property ;
-    rdfs:label "performed by"@en ;
+    rdfs:label "performed by"@en, "imeimbwa na"@sw ;
     rdfs:comment "The artist or group who recorded or performs a song."@en ;
     rdfs:domain mkv:Song ;
     rdfs:range xsd:string .
@@ -335,14 +315,14 @@ mkv:releasedIn a rdf:Property ;
 # ------------------------------------------------------------
 
 mkv:organizationName a rdf:Property ;
-    rdfs:label "organization name"@en ;
+    rdfs:label "organization name"@en, "jina la shirika"@sw ;
     rdfs:comment "The official name of an organisation."@en ;
     rdfs:domain mkv:Organization ;
     rdfs:range xsd:string .
 
 mkv:organizationUrl a rdf:Property ;
-    rdfs:label "organization URL"@en ;
-    rdfs:comment "The web address of an organisation."@en ;
+    rdfs:label "organization URL"@en, "anwani ya tovuti"@sw ;
+    rdfs:comment "The web address of an organisation."@en, "Kiungo cha kuelekea rasilimali kwenye mtandao"@sw ;
     rdfs:domain mkv:Organization ;
     rdfs:range xsd:anyURI .
     
@@ -352,7 +332,7 @@ mkv:organizationUrl a rdf:Property ;
 
 mkv:FictionalPerson a rdfs:Class ;
     rdfs:subClassOf mkv:Person ;
-    rdfs:label "Fictional Person"@en ;
+    rdfs:label "Fictional Person"@en, "Mhusika wa kubuni"@sw ;
     rdfs:comment """A person who exists within a fictional work e.g a television series, 
     novel or other narrative. Represented here as a named individual with RDF 
     triples because the boundary between people one knows and people one 
@@ -360,23 +340,20 @@ mkv:FictionalPerson a rdfs:Class ;
 
 mkv:Farm a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
-    rdfs:label "Farm"@en ;
-    rdfs:label "Shamba"@sw ;
+    rdfs:label "Farm"@en, "Shamba"@sw ;
     rdfs:comment """An agricultural operation. May also function as a bed and breakfast, 
     a militia training ground, or a beet processing facility depending on ownership."""@en .
 
 mkv:GovernmentOffice a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
-    rdfs:label "Government Office"@en ;
-    rdfs:label "Ofisi ya Serikali"@sw ;
+    rdfs:label "Government Office"@en, "Ofisi ya Serikali"@sw ;
     rdfs:comment """A department, agency, or office of a government body at any level - 
     municipal, national, or executive. Includes departments whose director 
     philosophically opposes the existence of government departments."""@en .
 
 mkv:PoliceStation a rdfs:Class ;
     rdfs:subClassOf mkv:Organization ;
-    rdfs:label "Police Station"@en ;
-    rdfs:label "Kituo cha Polisi"@sw ;
+    rdfs:label "Police Station"@en, "Kituo cha Polisi"@sw ;
     rdfs:comment "A law enforcement facility. A precinct. The 99th, for instance."@en .
 
 mkv:CommunityServiceProgramme a rdfs:Class ;
@@ -400,29 +377,26 @@ mkv:sourceWork a rdf:Property ;
 
 mkv:hasColleague a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
-    rdfs:label "has colleague"@en ;
+    rdfs:label "has colleague"@en, "ana mfanyakazi mwenzake"@sw ;
     rdfs:comment "Relates a person to another person they work alongside."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
 
 mkv:isCousinOf a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
-    rdfs:label "is cousin of"@en ;
-    rdfs:label "ni binamu wa"@sw ;
+    rdfs:label "is cousin of"@en, "ni binamu wa"@sw ;
     rdfs:comment "Relates a person to their cousin."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
 
 mkv:livesAt a rdf:Property ;
-    rdfs:label "lives at"@en ;
-    rdfs:label "anaishi"@sw ;
+    rdfs:label "lives at"@en, "anaishi"@sw ;
     rdfs:comment "Relates a person to the place or organisation at which they reside."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
 
 mkv:jobTitle a rdf:Property ;
-    rdfs:label "job title"@en ;
-    rdfs:label "cheo"@sw ;
+    rdfs:label "job title"@en, "cheo cha kazi"@sw ;
     rdfs:comment """The formal or claimed title of a person's role within an organisation. 
     Note: the distinction between 'Assistant Regional Manager' and 
     'Assistant to the Regional Manager' is legally and personally significant 
@@ -440,8 +414,7 @@ mkv:hasSuperpower a rdf:Property ;
     rdfs:range xsd:string .
 
 mkv:politicalPhilosophy a rdf:Property ;
-    rdfs:label "political philosophy"@en ;
-    rdfs:label "falsafa ya kisiasa"@sw ;
+    rdfs:label "political philosophy"@en, "falsafa ya kisiasa"@sw ;
     rdfs:comment """A person's stated or demonstrated political worldview. 
     Most interesting when the person's philosophy is in direct tension 
     with their employment - for instance, holding libertarian views 
@@ -459,16 +432,14 @@ mkv:notableQuote a rdf:Property ;
 
 mkv:isParentOf a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
-    rdfs:label "is parent of"@en ;
-    rdfs:label "ni mzazi wa"@sw ;
+    rdfs:label "is parent of"@en, "ni mzazi wa"@sw ;
     rdfs:comment "Relates a person to their child."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person .
 
 mkv:isChildOf a rdf:Property ;
     rdfs:subPropertyOf mkv:knows ;
-    rdfs:label "is child of"@en ;
-    rdfs:label "ni mtoto wa"@sw ;
+    rdfs:label "is child of"@en, "ni mtoto wa"@sw ;
     rdfs:comment "Relates a person to their parent. Inverse of mkv:isParentOf."@en ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Person ;
