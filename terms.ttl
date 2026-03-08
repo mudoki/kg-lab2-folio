@@ -238,7 +238,7 @@ mkv:externalProfile a rdf:Property ;
     rdfs:comment """A URI pointing to a peer's own published linked data profile, 
     such as a GitHub Pages URL hosting their personal RDF data."""@en ;
     rdfs:domain mkv:Peer ;
-    rdfs:range xsd:anyURI .
+    rdfs:range rdfs:Resource .
 
 # ------------------------------------------------------------
 # PROPERTIES - INTERESTS AND CELESTIAL
