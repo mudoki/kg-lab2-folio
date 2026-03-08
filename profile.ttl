@@ -79,13 +79,13 @@ mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
     mkv:name "Ward De Muynck" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile <https://tabulas.eu/ward/profile.ttl> ;
-    rdfs:seeAlso <https://www.tabulas.eu/ward/vocab.ttl> ;
+    rdfs:seeAlso <https://www.tabulas.eu/ward/vocab.ttl#> ;
     owl:sameAs ward:me .
     
 mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
     mkv:name "Thijs Dhulster" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#> ;
+    mkv:externalProfile <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl> ;
     rdfs:seeAlso <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> ;
     owl:sameAs thijs:me .
     
