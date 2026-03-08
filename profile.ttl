@@ -22,7 +22,7 @@ mkd:MarlinKisia
     mkv:name "Marlin Kisia" ;
     mkv:identifier "567890" ;
     mkv:email "marlinkisia@email.com" ;
-    mkv:yearOfStudy 1 ;
+    mkv:yearOfStudy 109 ;
     mkv:memberOf mkd:GhentUniversity ;
     mkv:worksFor mkd:SunflowerKindergarten ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
@@ -40,8 +40,7 @@ mkd:MarlinKisia
     Subtly interested in the moons of the outer solar system and whether 
     anything is swimming in Europa's ocean. Also very interested in etymology and karaoke. 
     Will most definitely overuse the rdfs:comment thingy, I should know better. 
-    Too much of anything is..."""@en ;
-    rdfs:seeAlso <https://mudoki.github.io/kg-lab2-folio/terms.ttl#> .
+    Too much of anything is..."""@en ; .
 
 
 mkd:MarlinKisia mkv:hasPeer seppe:me, ward:me, thijs:me, oliver:me .
@@ -75,28 +74,24 @@ mkd:SeppeSantens a mkv:Peer, mkv:Student ;
     mkv:name "Seppe Santens" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile <https://seppesantens.github.io/rdf-lab2/data.ttl> ;
-    rdfs:seeAlso <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> ;
     owl:sameAs seppe:me .
 
 mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
     mkv:name "Ward De Muynck" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile <https://tabulas.eu/ward/profile.ttl> ;
-    rdfs:seeAlso <https://www.tabulas.eu/ward/vocab.ttl#> ;
     owl:sameAs ward:me .
     
 mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
     mkv:name "Thijs Dhulster" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl> ;
-    rdfs:seeAlso <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> ;
     owl:sameAs thijs:me .
     
 mkd:OliverDeMeyst a mkv:Peer, mkv:Student ;
     mkv:name "Oliver De Meyst" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
     mkv:externalProfile <https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl> ;
-    rdfs:seeAlso <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#> ;
     owl:sameAs oliver:me .
 
 # ------------------------------------------------------------
