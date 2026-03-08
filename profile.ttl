@@ -42,6 +42,9 @@ mkd:MarlinKisia
     Will most definitely overuse the rdfs:comment thingy, I should know better. 
     Too much of anything is..."""@en ;
     rdfs:seeAlso <https://mudoki.github.io/kg-lab2-folio/terms.ttl#> .
+
+
+mkd:MarlinKisia mkv:hasPeer seppe:me, ward:me, thijs:me, oliver:me .
     
     
 # ------------------------------------------------------------
