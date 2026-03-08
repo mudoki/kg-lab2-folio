@@ -6,10 +6,10 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd:   <https://www.wikidata.org/entity/> .
 
-@prefix seppe: <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> .
-@prefix ward: <https://tabulas.eu/ward/vocab.ttl#> .
-@prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> .
-@prefix oliver: <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#> .
+@prefix seppe: <https://seppesantens.github.io/rdf-lab2/data.ttl#me .
+@prefix ward: <https://tabulas.eu/ward/profile.ttl#> .
+@prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me> .
+@prefix oliver: <https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#> .
 
 
 
@@ -71,28 +71,28 @@ _:peer1 a mkv:Peer ;
 mkd:SeppeSantens a mkv:Peer, mkv:Student ;
     mkv:name "Seppe Santens" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile "https://seppesantens.github.io/rdf-lab2/data.ttl#me"^^xsd:anyURI ;
+    mkv:externalProfile <https://seppesantens.github.io/rdf-lab2/data.ttl> ;
     rdfs:seeAlso <https://seppesantens.github.io/rdf-lab2/vocab.ttl#> ;
     owl:sameAs seppe:me .
 
 mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
     mkv:name "Ward De Muynck" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile "https://tabulas.eu/ward/profile.ttl#"^^xsd:anyURI ;
+    mkv:externalProfile <https://tabulas.eu/ward/profile.ttl> ;
     rdfs:seeAlso <https://www.tabulas.eu/ward/vocab.ttl> ;
     owl:sameAs ward:me .
     
 mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
     mkv:name "Thijs Dhulster" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile "https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me"^^xsd:anyURI ;
+    mkv:externalProfile <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#> ;
     rdfs:seeAlso <https://tdhulster.github.io/knowledge-graphs-ugent-2026/vocab.ttl#> ;
     owl:sameAs thijs:me .
     
 mkd:OliverDeMeyst a mkv:Peer, mkv:Student ;
     mkv:name "Oliver De Meyst" ;
     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile "https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#"^^xsd:anyURI ;
+    mkv:externalProfile <https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl> ;
     rdfs:seeAlso <https://raw.githubusercontent.com/olivierdm/itsme/main/vocabulary.ttl#> ;
     owl:sameAs oliver:me .
 
