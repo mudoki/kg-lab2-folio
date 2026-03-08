@@ -6,7 +6,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd:   <https://www.wikidata.org/entity/> .
 
-@prefix seppe: <https://seppesantens.github.io/rdf-lab2/data.ttl#me .
+@prefix seppe: <https://seppesantens.github.io/rdf-lab2/data.ttl#me> .
 @prefix ward: <https://tabulas.eu/ward/profile.ttl#> .
 @prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#me> .
 @prefix oliver: <https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl#> .
