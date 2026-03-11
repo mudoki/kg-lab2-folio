@@ -34,7 +34,7 @@ mkd:MarlinKisia
                  mkd:Io, mkd:ProximaCentauriB, mkd:ProximaCentauri ;
     mkv:hasFavouriteSong mkd:StayinAlive ;
     mkv:knows mkd:DwightSchrute, mkd:RonSwanson, mkd:CaptainHolt,
-              mkd:NathanYoung, mkd:RaulDeMaldonado, mkd:SelinaMeyer ;
+              mkd:NathanYoung, mkd:RaulDeMaldonado, mkd:SelinaMeyer .
     # rdfs:comment """Year 1 student, part-time kindergarten worker, 
     # and occasional builder of RDF vocabularies about herself. 
     # Subtly interested in the moons of the outer solar system and whether 
