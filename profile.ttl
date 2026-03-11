@@ -64,35 +64,35 @@ mkd:ElsDeVleeschauwer a mkv:Instructor ;
 # this is a blank node, to guide the structure of how to populate
 # future people I know, as soon as I have a URI
 
-_:peer1 a mkv:Peer ;
-    mkv:name "Future Student" ;
-    rdfs:comment "A peer whose profile is not yet known."@en .
+# _:peer1 a mkv:Peer ;
+#     mkv:name "Future Student" ;
+#     rdfs:comment "A peer whose profile is not yet known."@en .
     
-# actual peers for this exercise
+# # actual peers for this exercise
 
-mkd:SeppeSantens a mkv:Peer, mkv:Student ;
-    mkv:name "Seppe Santens" ;
-    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile <https://seppesantens.github.io/rdf-lab2/data.ttl> ;
-    owl:sameAs seppe:me .
+# mkd:SeppeSantens a mkv:Peer, mkv:Student ;
+#     mkv:name "Seppe Santens" ;
+#     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+#     mkv:externalProfile <https://seppesantens.github.io/rdf-lab2/data.ttl> ;
+#     owl:sameAs seppe:me .
 
-mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
-    mkv:name "Ward De Muynck" ;
-    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile <https://tabulas.eu/ward/profile.ttl> ;
-    owl:sameAs ward:me .
+# mkd:WardDeMuynck a mkv:Peer, mkv:Student ;
+#     mkv:name "Ward De Muynck" ;
+#     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+#     mkv:externalProfile <https://tabulas.eu/ward/profile.ttl> ;
+#     owl:sameAs ward:me .
     
-mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
-    mkv:name "Thijs Dhulster" ;
-    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl> ;
-    owl:sameAs thijs:me .
+# mkd:ThijsDhulster a mkv:Peer, mkv:Student ;
+#     mkv:name "Thijs Dhulster" ;
+#     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+#     mkv:externalProfile <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl> ;
+#     owl:sameAs thijs:me .
     
-mkd:OliverDeMeyst a mkv:Peer, mkv:Student ;
-    mkv:name "Oliver De Meyst" ;
-    mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
-    mkv:externalProfile <https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl> ;
-    owl:sameAs oliver:me .
+# mkd:OliverDeMeyst a mkv:Peer, mkv:Student ;
+#     mkv:name "Oliver De Meyst" ;
+#     mkv:hasLabInstructor mkd:ElsDeVleeschauwer ;
+#     mkv:externalProfile <https://raw.githubusercontent.com/olivierdm/itsme/refs/heads/main/profile.ttl> ;
+#     owl:sameAs oliver:me .
 
 # ------------------------------------------------------------
 # INTERESTS
