@@ -35,12 +35,12 @@ mkd:MarlinKisia
     mkv:hasFavouriteSong mkd:StayinAlive ;
     mkv:knows mkd:DwightSchrute, mkd:RonSwanson, mkd:CaptainHolt,
               mkd:NathanYoung, mkd:RaulDeMaldonado, mkd:SelinaMeyer ;
-    rdfs:comment """Year 1 student, part-time kindergarten worker, 
-    and occasional builder of RDF vocabularies about herself. 
-    Subtly interested in the moons of the outer solar system and whether 
-    anything is swimming in Europa's ocean. Also very interested in etymology and karaoke. 
-    Will most definitely overuse the rdfs:comment thingy, I should know better. 
-    Too much of anything is..."""@en ; .
+    # rdfs:comment """Year 1 student, part-time kindergarten worker, 
+    # and occasional builder of RDF vocabularies about herself. 
+    # Subtly interested in the moons of the outer solar system and whether 
+    # anything is swimming in Europa's ocean. Also very interested in etymology and karaoke. 
+    # Will most definitely overuse the rdfs:comment thingy, I should know better. 
+    # Too much of anything is..."""@en ; .
 
 
 mkd:MarlinKisia mkv:hasPeer seppe:me, ward:me, thijs:me, oliver:me .
