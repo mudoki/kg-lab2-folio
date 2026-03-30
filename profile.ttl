@@ -5,6 +5,7 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix wd:   <https://www.wikidata.org/entity/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 @prefix seppe: <https://seppesantens.github.io/rdf-lab2/data.ttl#> .
 @prefix ward: <https://tabulas.eu/ward/profile.ttl#> .
@@ -44,6 +45,8 @@ mkd:MarlinKisia
 
 
 mkd:MarlinKisia mkv:hasPeer seppe:me, ward:me, thijs:me, oliver:me .
+mkd:MarlinKisia foaf:name "Marlin Kisia" ;
+                mkv:enrolledIn mkd:KnowledgeGraphsCourse .
 mkd:KnowledgeGraphsCourse a mkv:Course ;
     mkv:name "Knowledge Graphs 2025" .
     
