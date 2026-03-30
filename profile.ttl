@@ -49,7 +49,50 @@ mkd:MarlinKisia foaf:name "Marlin Kisia" ;
                 mkv:enrolledIn mkd:KnowledgeGraphsCourse .
 mkd:KnowledgeGraphsCourse a mkv:Course ;
     mkv:name "Knowledge Graphs 2025" .
-    
+
+mkd:TimBernersLee a mkd:Person ;
+    mkd:name "Tim Berners-Lee" ;
+    mkd:sameAs wd:Q80 .
+
+mkd:PaulClarke a mkd:Person ;
+    mkd:name "Paul Clarke" .
+
+mkd:London a mkd:Place ;
+    mkd:name "London" ;
+    mkd:sameAs wd:Q84 .
+
+# ------------------------------------------------------------
+# PHOTOS
+# ------------------------------------------------------------
+mkd:MyPhoto a mkv:Photograph ;
+    mkv:title "Portrait of Marlin" ;
+    mkv:description "Photo showing the name Marlin, not actually the Marlin described in this file. Marlin Kisia did not create it, just declared as such for the purpose of this assignment." ;
+    mkv:creator mkd:MarlinKisia ;
+    mkv:depicts mkd:MarlinKisia ;
+    mkv:takenAt mkd:GhentUniversity ;
+    mkv:hasImage <https://upload.wikimedia.org/wikipedia/commons/3/3e/1966_AMC_Marlin_%285_of_6%29_personal_luxury_fastback_with_a_4-speed_finished_in_2_tone_tan_-_emblem.jpg> .
+
+mkd:EuropaPhoto a mkv:Photograph ;
+    mkv:title "Europa surface" ;
+    mkv:description "Icy surface of Jupiter's moon Europa with visible cracks." ;
+    mkv:depicts mkd:Europa ;
+    mkv:hasImage <https://upload.wikimedia.org/wikipedia/commons/b/b3/Europa_-_Perijove_45_%28cropped%29.png> .
+
+mkd:TimBernersLeePhoto a mkd:Photograph ;
+    mkd:title "Sir Tim Berners-Lee" ;
+    mkd:creator mkd:PaulClarke ;
+    mkd:depicts mkd:TimBernersLee ;
+    mkd:takenAt mkd:London ;
+    mkd:description "Sir Tim arriving at the Guildhall to receive the Honorary Freedom of the City of London." ;
+    mkd:hasImage <https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg> .
+
+
+mkd:RaulPhoto a mkv:Photograph ;
+    mkv:title "Photo of Raul De Maldonado" ;
+    mkv:description "Raul in delegate office attire representing Venezuela." ;
+    mkv:depicts mkd:RaulDeMaldonado ;
+    mkv:hasImage <https://static.wikia.nocookie.net/parksandrecreation/images/7/77/Parks_and_recreation_sister_city.jpg/revision/latest?cb=20111125172731> .
+
     
 # ------------------------------------------------------------
 # INSTRUCTOR
