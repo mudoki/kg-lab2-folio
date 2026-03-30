@@ -1,0 +1,62 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+
+# ============================================================
+# RDFS RULES
+# These rules are for the reasoner to address rdfs:subClassOf,
+# rdfs:subPropertyOf, rdfs:domain and rdfs:range declarations
+# made in my terms.ttl
+# ============================================================
+
+# domain
+{?P rdfs:domain ?C. ?X ?P ?Y} => {?X a ?C}.
+
+# range
+{?P rdfs:range ?C. ?X ?P ?Y} => {?Y a ?C}.
+
+# subClassOf (instantiation)
+{?C rdfs:subClassOf ?D. ?X a ?C} => {?X a ?D}.
+
+# subClassOf (transitivity)
+{?C rdfs:subClassOf ?D. ?D rdfs:subClassOf ?E} => {?C rdfs:subClassOf ?E}.
+
+# subClassOf propagates domain restrictions upward
+{?C rdfs:subClassOf ?D. ?P rdfs:domain ?C} => {?P rdfs:domain ?D}.
+
+# subClassOf propagates range restrictions upward
+{?C rdfs:subClassOf ?D. ?P rdfs:range ?C} => {?P rdfs:range ?D}.
+
+# subPropertyOf (propagation)
+{?P rdfs:subPropertyOf ?Q. ?S ?P ?O} => {?S ?Q ?O}.
+
+# subPropertyOf (transitivity)
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:subPropertyOf ?R} => {?P rdfs:subPropertyOf ?R}.
+
+# subPropertyOf inherits domain
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:domain ?C} => {?P rdfs:domain ?C}.
+
+# subPropertyOf inherits range
+{?P rdfs:subPropertyOf ?Q. ?Q rdfs:range ?C} => {?P rdfs:range ?C}.
+
+# ============================================================
+# OWL RULES 
+# My vocabulary uses
+#   owl:sameAs - for Wikidata links (e.g in Tim Berners-Lee, celestial bodies, song)
+#   owl:inverseOf - supervisesStudent / hasLabInstructor; isParentOf / isChildOf
+# so rules will address these
+# ============================================================
+
+# sameAs: symmetric
+{?X owl:sameAs ?Y} => {?Y owl:sameAs ?X}.
+
+# sameAs: transitive
+{?X owl:sameAs ?Y. ?Y owl:sameAs ?Z} => {?X owl:sameAs ?Z}.
+
+# inverseOf: if P is the inverse of Q, then S P O implies O Q S
+{?P owl:inverseOf ?Q. ?S ?P ?O} => {?O ?Q ?S}.
+
+# inverseOf: and the other direction
+{?P owl:inverseOf ?Q. ?S ?Q ?O} => {?O ?P ?S}.
+
+# inverseOf: symmetric at the schema level
+{?P owl:inverseOf ?Q} => {?Q owl:inverseOf ?P}.
