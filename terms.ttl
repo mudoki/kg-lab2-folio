@@ -307,6 +307,7 @@ mkv:hasImage a rdf:Property ;
     rdfs:label "has image"@en, "ina picha"@sw ;
     rdfs:comment "Links a photograph entity to its digital image resource available on the Web."@en ;
     rdfs:domain mkv:Photograph ;
+    rdfs:subPropertyOf foaf:depiction ;
     rdfs:range rdfs:Resource .
 
 
