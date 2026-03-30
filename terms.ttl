@@ -22,7 +22,7 @@
     dcterms:creator <https://mudoki.github.io/kg-lab2-folio/profile.ttl#MarlinKisia> ;
     dcterms:created "2026-03-03"^^xsd:date ;
     vann:preferredNamespacePrefix "mkv" ;
-    vann:preferredNamespaceUri "https://mudoki.github.io/kg-lab2-folio/terms.ttl#"^^xsd:anyURI .
+    vann:preferredNamespaceUri <https://mudoki.github.io/kg-lab2-folio/terms.ttl#> .
 
 # ------------------------------------------------------------
 # CLASSES - PERSONS
