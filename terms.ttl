@@ -74,6 +74,14 @@ mkv:Photograph a rdfs:Class ;
     rdfs:subClassOf foaf:Image .
 
 # ------------------------------------------------------------
+# CLASSES - EDUCATION
+# ------------------------------------------------------------
+
+mkv:Course a rdfs:Class ;
+    rdfs:label "Course"@en, "Kipindi"@sw ;
+    rdfs:comment "An academic course offered by an educational institution."@en .
+
+# ------------------------------------------------------------
 # CLASSES - ORGANISATIONS
 # ------------------------------------------------------------
 
@@ -204,6 +212,12 @@ mkv:hasAffiliation a rdf:Property ;
     rdfs:domain mkv:Person ;
     rdfs:range mkv:Organization .
 
+mkv:enrolledIn a rdf:Property ;
+    rdfs:label "enrolled in"@en, "amejiunga na"@sw ;
+    rdfs:comment "Relates a person to a course they are enrolled in."@en ;
+    rdfs:domain mkv:Person ;
+    rdfs:range mkv:Course .
+
 # ------------------------------------------------------------
 # PROPERTIES - ACADEMIC RELATIONSHIPS
 # ------------------------------------------------------------
@@ -256,6 +270,7 @@ mkv:externalProfile a rdf:Property ;
 # ------------------------------------------------------------
 # PROPERTIES - DIGITAL ITEMS
 # ------------------------------------------------------------
+
 mkv:title a rdf:Property ;
     rdfs:label "title"@en, "kichwa cha picha"@sw ;
     rdfs:comment "The title or name assigned to a photograph."@en ;
@@ -288,12 +303,11 @@ mkv:takenAt a rdf:Property ;
     rdfs:domain mkv:Photograph ;
     rdfs:range mkv:Place .
 
-mkv:imageUrl a rdf:Property ;
-    rdfs:label "image URL"@en, "kiungo cha picha"@sw ;
-    rdfs:comment "A URI linking to the digital representation of a photograph."@en ;
+mkv:hasImage a rdf:Property ;
+    rdfs:label "has image"@en, "ina picha"@sw ;
+    rdfs:comment "Links a photograph entity to its digital image resource available on the Web."@en ;
     rdfs:domain mkv:Photograph ;
     rdfs:range rdfs:Resource .
-
 
 
 # ------------------------------------------------------------
