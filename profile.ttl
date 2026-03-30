@@ -50,16 +50,16 @@ mkd:MarlinKisia foaf:name "Marlin Kisia" ;
 mkd:KnowledgeGraphsCourse a mkv:Course ;
     mkv:name "Knowledge Graphs 2025" .
 
-mkd:TimBernersLee a mkd:Person ;
-    mkd:name "Tim Berners-Lee" ;
-    mkd:sameAs wd:Q80 .
+mkd:TimBernersLee a mkv:Person ;
+    mkv:name "Tim Berners-Lee" ;
+    owl:sameAs wd:Q80 .
 
-mkd:PaulClarke a mkd:Person ;
-    mkd:name "Paul Clarke" .
+mkd:PaulClarke a mkv:Person ;
+    mkv:name "Paul Clarke" .
 
-mkd:London a mkd:Place ;
-    mkd:name "London" ;
-    mkd:sameAs wd:Q84 .
+mkd:London a mkv:Place ;
+    mkv:name "London" ;
+    owl:sameAs wd:Q84 .
 
 # ------------------------------------------------------------
 # PHOTOS
@@ -79,18 +79,18 @@ mkd:EuropaPhoto a mkv:Photograph ;
     mkv:hasImage <https://upload.wikimedia.org/wikipedia/commons/b/b3/Europa_-_Perijove_45_%28cropped%29.png> .
 
 mkd:TimBernersLeePhoto a mkd:Photograph ;
-    mkd:title "Sir Tim Berners-Lee" ;
-    mkd:creator mkd:PaulClarke ;
-    mkd:depicts mkd:TimBernersLee ;
-    mkd:takenAt mkd:London ;
-    mkd:description "Sir Tim arriving at the Guildhall to receive the Honorary Freedom of the City of London." ;
-    mkd:hasImage <https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg> .
+    mkv:title "Sir Tim Berners-Lee" ;
+    mkv:creator mkd:PaulClarke ;
+    mkv:depicts mkd:TimBernersLee ;
+    mkv:takenAt mkd:London ;
+    mkv:description "Sir Tim arriving at the Guildhall to receive the Honorary Freedom of the City of London." ;
+    mkv:hasImage <https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg> .
 
 mkd:RaulPhoto a mkv:Photograph ;
     mkv:title "Photo of Raul De Maldonado" ;
     mkv:description "Raul in delegate office attire representing Venezuela." ;
     mkv:depicts mkd:RaulDeMaldonado ;
-    mkd:takenAt mkd:PawneeParksDept ;
+    mkv:takenAt mkd:PawneeParksDept ;
     mkv:hasImage <https://static.wikia.nocookie.net/parksandrecreation/images/7/77/Parks_and_recreation_sister_city.jpg/revision/latest?cb=20111125172731> .
 
     
