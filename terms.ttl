@@ -288,6 +288,12 @@ mkv:takenAt a rdf:Property ;
     rdfs:domain mkv:Photograph ;
     rdfs:range mkv:Place .
 
+mkv:imageUrl a rdf:Property ;
+    rdfs:label "image URL"@en, "kiungo cha picha"@sw ;
+    rdfs:comment "A URI linking to the digital representation of a photograph."@en ;
+    rdfs:domain mkv:Photograph ;
+    rdfs:range rdfs:Resource .
+
 
 
 # ------------------------------------------------------------
@@ -373,7 +379,7 @@ mkv:organizationUrl a rdf:Property ;
     rdfs:label "organization URL"@en, "anwani ya tovuti"@sw ;
     rdfs:comment "The web address of an organisation."@en, "Kiungo cha kuelekea rasilimali kwenye mtandao"@sw ;
     rdfs:domain mkv:Organization ;
-    rdfs:range xsd:anyURI .
+    rdfs:range rdfs:Resource .
     
 # ------------------------------------------------------------
 # CLASSES - FICTIONAL PERSONS AND PLACES (because I am at my etc [end of thinking capacity], some pop culture reference will be made in the data file)
