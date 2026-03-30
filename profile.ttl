@@ -44,6 +44,8 @@ mkd:MarlinKisia
 
 
 mkd:MarlinKisia mkv:hasPeer seppe:me, ward:me, thijs:me, oliver:me .
+mkd:KnowledgeGraphsCourse a mkv:Course ;
+    mkv:name "Knowledge Graphs 2025" .
     
     
 # ------------------------------------------------------------
