@@ -5,6 +5,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 
 # ------------------------------------------------------------
@@ -29,6 +30,7 @@
 
 mkv:Person a rdfs:Class ;
     rdfs:label "Person"@en, "Mtu"@sw ;
+    rdfs:subClassOf foaf:Person ;
     rdfs:comment "A human being. The root class for all person types in this vocabulary."@en .
 
 mkv:Student a rdfs:Class ;
@@ -61,6 +63,15 @@ mkv:Peer a rdfs:Class ;
     rdfs:comment """A person known to the subject, typically a fellow student or colleague, 
     who may maintain their own linked data profile at an external URI. 
     The mkv:externalProfile property is used to link to that profile when available."""@en .
+
+# ------------------------------------------------------------
+# CLASSES - VISUAL MEDIA
+# ------------------------------------------------------------
+
+mkv:Photograph a rdfs:Class ;
+    rdfs:label "Photograph"@en, "Picha"@sw ;
+    rdfs:comment "A still image captured by a camera, either analog or digital, typically representing a real-world scene."@en ;
+    rdfs:subClassOf foaf:Image .
 
 # ------------------------------------------------------------
 # CLASSES - ORGANISATIONS
@@ -158,6 +169,7 @@ mkv:name a rdf:Property ;
     rdfs:label "name"@en, "jina"@sw ;
     rdfs:comment "The full name of a person."@en ;
     rdfs:domain mkv:Person ;
+    rdfs:subPropertyOf foaf:name ;
     rdfs:range xsd:string .
 
 mkv:email a rdf:Property ;
@@ -239,6 +251,44 @@ mkv:externalProfile a rdf:Property ;
     such as a GitHub Pages URL hosting their personal RDF data."""@en ;
     rdfs:domain mkv:Peer ;
     rdfs:range rdfs:Resource .
+
+
+# ------------------------------------------------------------
+# PROPERTIES - DIGITAL ITEMS
+# ------------------------------------------------------------
+mkv:title a rdf:Property ;
+    rdfs:label "title"@en, "kichwa cha picha"@sw ;
+    rdfs:comment "The title or name assigned to a photograph."@en ;
+    rdfs:domain mkv:Photograph ;
+    rdfs:range xsd:string .
+
+mkv:description a rdf:Property ;
+    rdfs:label "description"@en, "maelezo"@sw ;
+    rdfs:comment "A textual description summarizing the content or context of a photograph."@en ;
+    rdfs:domain mkv:Photograph ;
+    rdfs:range xsd:string .
+
+mkv:creator a rdf:Property ;
+    rdfs:label "creator"@en, "mpiga picha"@sw ;
+    rdfs:comment "Relates a photograph to the person who created or captured it."@en ;
+    rdfs:domain mkv:Photograph ;
+    rdfs:subPropertyOf foaf:maker ;
+    rdfs:range mkv:Person .
+
+mkv:depicts a rdf:Property ;
+    rdfs:label "depicts"@en, "inaonyesha"@sw ;
+    rdfs:comment "Relates a photograph to a person who is visible in the image."@en ;
+    rdfs:domain mkv:Photograph ;
+    rdfs:subPropertyOf foaf:depicts ;
+    rdfs:range mkv:Person .
+
+mkv:takenAt a rdf:Property ;
+    rdfs:label "taken at"@en, "ilipochukuliwa"@sw ;
+    rdfs:comment "Relates a photograph to the place where it was captured."@en ;
+    rdfs:domain mkv:Photograph ;
+    rdfs:range mkv:Place .
+
+
 
 # ------------------------------------------------------------
 # PROPERTIES - INTERESTS AND CELESTIAL
@@ -362,6 +412,10 @@ mkv:CommunityServiceProgramme a rdfs:Class ;
     alternative to custodial sentences. In at least one documented case in 
     South London, also the site of an unexplained meteorological event conferring 
     supernatural abilities on participants."""@en .
+
+mkv:Place a rdfs:Class ;
+    rdfs:label "Place"@en, "Mahali"@sw ;
+    rdfs:comment "A geographic location such as a city, country, or specific site."@en .
 
 # ------------------------------------------------------------
 # PROPERTIES - FICTIONAL PERSONS AND RELATIONSHIPS
